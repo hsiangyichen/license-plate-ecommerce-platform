@@ -1,0 +1,321 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/components/Footer/styles.module.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.styles_container__lWOR5 {
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/components/Navbar/styles.module.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.styles_container__PwURR {
+  height: 18vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 170px 0 120px;
+}
+
+.styles_logo__crSLP {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.styles_links__Aun8H {
+  display: flex;
+  gap: 0px;
+  font-size: 17px;
+  color: #fff;
+  cursor: pointer;
+}
+.styles_links__Aun8H .styles_link__jh9r1 {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+}
+.styles_links__Aun8H .styles_link__jh9r1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.08em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: transform 100ms;
+  transform: translate3d(-101%, 0, 0);
+}
+.styles_links__Aun8H .styles_link__jh9r1:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.styles_links__Aun8H .styles_link__jh9r1:hover::after {
+  opacity: 0.8;
+  transform: translate3d(0, 0, 0);
+}
+
+.styles_img__FGb0I {
+  width: 230px;
+  position: relative;
+  left: 0px;
+  top: 5px;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/components/SearchBar/styles.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.styles_container__rW3et {
+  width: 20%;
+  margin: 20px 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+}
+
+.styles_searchbarwrapper__cd7kp {
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid black;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.styles_input__0C54G {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  font-size: 16px;
+  width: 100%;
+  margin-left: 5px;
+}
+.styles_input__0C54G:focus {
+  outline: none;
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/components/SearchResult/styles.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.styles_container__nrTNR {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.styles_searchresultwrapper__LDjkN {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  height: 50vh;
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/components/AboutUs/styles.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.styles_container__12_b9 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/app/styles.module.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.styles_container__YJPlC {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.styles_video__FZqrr {
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #104b47;
+}
+
+.styles_item__cxMIh {
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.styles_itemdown__XeE6R {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.styles_right__fWrj5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.styles_title__6GsAA {
+  min-width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px 0 170px;
+  background: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: styles_fadeDown__GYAoj 0.8s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.styles_desc__HOx6p {
+  padding: 130px 170px 100px 0px;
+  font-size: 20px;
+  font-weight: 100;
+  color: #fff;
+  opacity: 0;
+  animation-name: styles_fadeUp__2JkWk;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s;
+}
+
+.styles_button__1x8_7 {
+  margin: 0 170px 0 0px;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 100;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  width: max-content;
+  color: #fff;
+  opacity: 0;
+  animation-name: styles_fadeUp__2JkWk;
+  animation-duration: 1s;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+}
+.styles_button__1x8_7:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.styles_downArrow__RluIf {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 40px;
+  animation: styles_arrowDown__Ywbl_ 1.5s infinite;
+  animation-delay: 1.2s;
+  opacity: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+@keyframes styles_fadeDown__GYAoj {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes styles_fadeUp__2JkWk {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes styles_arrowDown__Ywbl_ {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0px, 30px);
+    opacity: 0;
+  }
+}
+.styles_aboutusContainer__055qW {
+  width: 100%;
+  height: 100vh;
+  background: white;
+  display: flex;
+}
+
+.styles_aboutusLeft__Ki1aQ {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.styles_leftTop__l95eA {
+  height: 50%;
+  padding: 170px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+}
+
+.styles_leftBottom__yJaVK {
+  overflow: hidden;
+  height: 50%;
+  background-color: rgb(42, 45, 50);
+  color: white;
+  padding: 90px 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.styles_moreLink__WJHGp {
+  font-size: 18px;
+  font-weight: 300;
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+}
+.styles_moreLink__WJHGp:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+.styles_moreLink__WJHGp:hover .styles_arrowIcon__QKbWA {
+  animation: styles_moveRight__BflAY 1.2s infinite;
+}
+
+@keyframes styles_moveRight__BflAY {
+  0% {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
