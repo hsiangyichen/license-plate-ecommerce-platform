@@ -1,0 +1,46 @@
+@import "../../app/styles/colors";
+
+.searchResult {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.resultItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(33.33% - 3px);
+  box-sizing: border-box;
+  border: 1px solid black;
+  overflow: hidden;
+  &:hover {
+    background-color: rgba(213, 213, 213, 0.349);
+  }
+}
+
+.itemBox {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 10px 0;
+  min-width: 100%;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.plateNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  background-color: rgb(240, 231, 82);
+  border-radius: 5px;
+  border: 3px solid black;
+  overflow: hidden;
+}
+
+.itemPrice {
+  margin: 0 0 10px 0;
+}

@@ -1,0 +1,30 @@
+@import "../../app/styles/colors";
+
+.scrollToTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 110px;
+  z-index: 999;
+  padding: 5px;
+  // background-color: #007bff;
+  // color: #fff;
+  // border-radius: 30px;
+  cursor: pointer;
+  &:hover {
+    animation: arrowUp 1.5s infinite;
+  }
+}
+
+@keyframes arrowUp {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0px, -15px);
+    opacity: 0;
+  }
+}

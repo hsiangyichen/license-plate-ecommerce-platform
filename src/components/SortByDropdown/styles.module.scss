@@ -1,0 +1,37 @@
+@import "../../app/styles/colors";
+
+.sortByContainer {
+  display: flex;
+  align-items: center;
+  margin: 20px 170px;
+  // margin-top: 10px;
+}
+
+.sortByContainer label {
+  margin-right: 5px;
+  font-size: 14px;
+
+  // font-weight: bold;
+}
+
+.sortSelect {
+  // padding: 0 10px;
+  border: none;
+  width: 140px;
+  // appearance: none; /* Remove the default arrow icon in some browsers */
+  // border: none; /* Remove border */
+  outline: none; /* Remove outline */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sortSelect::-ms-expand {
+  display: none;
+}
+
+.sortSelect option {
+  font-size: 14px;
+  background-color: #fff;
+}
