@@ -1,74 +1,244 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { SearchBar, SearchResult, Navbar } from "@components";
+import React, {
+  ChangeEvent,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+import {
+  SearchBar,
+  SearchResult,
+  Navbar,
+  SortByDropdown,
+  ScrollToTopButton,
+  Pagination,
+} from "@components";
 import styles from "./styles.module.scss";
-import { json } from "stream/consumers";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const Purchase = () => {
-  const [results, setResults] = useState();
-  const carPlatesData = "data/carPlatesData.json";
-
-  async function fetchJson() {
-    const response = await fetch(carPlatesData);
-    const jsonData = await response.json();
-
-    setResults(jsonData);
-  }
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [responseData, setResponseData] = useState<any[]>([]);
+  const [searchTriggered, setSearchTriggered] = useState<boolean>(false);
+  const [selectedSortOption, setSelectedSortOption] =
+    useState<string>("default");
+  // Add pagination
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const itemsPerPage: number = 57;
 
   useEffect(() => {
-    fetchJson();
+    fetch("/data/carPlatesData.json")
+      .then((res) => res.json())
+      .then((res) => {
+        setResponseData(res); // Holds original responseData
+      });
   }, []);
+
+  const handleSearchChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      const inputValue = event.target.value;
+      setSearchTerm(inputValue);
+      setSearchTriggered(false);
+    },
+    []
+  );
+  const handleEnterKeyPress = useCallback(
+    (event: React.KeyboardEvent<HTMLInputElement>) => {
+      if (event.key === "Enter") {
+        setSearchTriggered(true);
+        setCurrentPage(1);
+      }
+    },
+    []
+  );
+
+  const handleSearchClick = useCallback(() => {
+    setSearchTriggered(true);
+    setCurrentPage(1);
+  }, []);
+
+  const results = useMemo(() => {
+    if (searchTriggered && searchTerm.trim() !== "") {
+      const filteredResults = responseData.filter(
+        ({ carPlateNum }: { carPlateNum: string }) =>
+          carPlateNum.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      return filteredResults;
+    } else {
+      return responseData;
+    }
+  }, [searchTerm, responseData, searchTriggered]);
+
+  const handleSortChange = (selectedOption: string) => {
+    // Update the selectedSortOption state with the selected sorting option
+    setSelectedSortOption(selectedOption);
+  };
+
+  const sortedResults = useMemo(() => {
+    let sortedData = [...results];
+
+    // Apply sorting based on the selected sorting option
+    switch (selectedSortOption) {
+      case "priceLow":
+        sortedData.sort((a, b) => a.price - b.price);
+        break;
+      case "priceHigh":
+        sortedData.sort((a, b) => b.price - a.price);
+        break;
+      case "alphabeticalOrder":
+        sortedData.sort(
+          (a, b) => a.carPlateNum?.localeCompare(b.carPlateNum) || 0
+        );
+        break;
+      default:
+        // No sorting or default sorting logic here
+        break;
+    }
+
+    return sortedData;
+  }, [results, selectedSortOption]);
+
+  const calculateCurrentPageItems = () => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    return sortedResults.slice(startIndex, endIndex);
+  };
+
+  const nextPage = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+  const prevPage = () => {
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
+
+  const currentItems = calculateCurrentPageItems();
 
   return (
     <div className={styles.container}>
-      <img className={styles.img} src={"images/platesingarage.jpg"} />
-      {/* <div className={styles.img}></div> */}
+      {/* <img className={styles.img} src={"images/platesingarage.jpg"} /> */}
+      <div className={styles.img}></div>
       <div className={styles.item}>
         <Navbar />
-        <h1 className={styles.title}>Find Your Own Car Plate</h1>
-        {/* <img
-          style={{ width: "100%", height: "100%" }}
-          src={"images/platesingarage.jpg"}
-        /> */}
-        {/* <h1 className={styles.title}>Shop</h1> */}
-        <p className={styles.desc}>Explore the car plates that you like</p>
-        <SearchBar />
-      </div>
-      {/* <SearchResult /> */}
-      <div
-        style={{
-          display: "flex",
-          width: "100%",
-          padding: " 50px 170px",
-          alignItems: "center",
-          flexWrap: "wrap",
-          // overflowY: "scroll",
-          // height: "50vh",
-          // justifyContent: "center",
-        }}
-      >
-        {results?.map((result) => (
+        {/* <h1 className={styles.title}>Find Your Own Car Plate</h1>
+        <p className={styles.desc}>Explore the car plates that you like</p> */}
+        <div
+          style={{
+            overflow: "hidden",
+            width: "100%",
+            height: "82vh",
+            position: "relative",
+          }}
+        >
+          <div>
+            <img
+              src={"images/car4.jpg"}
+              alt="Car Plates"
+              style={{
+                objectPosition: "center center",
+                objectFit: "cover",
+                width: "68%",
+                height: "70%",
+                position: "absolute",
+                bottom: "0px",
+                right: "0px",
+              }}
+            />
+          </div>
           <div
-            key={result.id}
             style={{
-              // display: "flex",
-              alignContent: "center",
-              // margin: "10px",
-              border: "1px solid black",
-              width: "33%",
-              minWidth: "300px",
-              // flex: "0 0 32%",
-              // height: "150px",
+              position: "absolute",
+              top: "0px",
+              left: "0px",
+              width: "70%",
+              height: "65vh",
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              padding: "100px",
+              // backgroundColor: "rgb(42, 45, 50)",
+              justifyContent: "center",
             }}
           >
-            <div style={{ margin: "10px", width: "250px" }}>
-              Car Plate Number: {result.carPlateNum}
-            </div>
-            <div style={{ margin: "10px" }}>${result.price}</div>
+            <h1
+              style={{
+                fontSize: "135px",
+                fontWeight: "300",
+              }}
+            >
+              Find Your Own Car Plate
+            </h1>
+            <p
+              style={{
+                fontSize: "25px",
+              }}
+            >
+              Explore the car plates that you like
+            </p>
           </div>
-        ))}
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0px",
+              left: "0px",
+              width: "100%",
+              // height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              padding: "90px 170px",
+              // backgroundColor: "rgb(42, 45, 50)",
+              justifyContent: "center",
+            }}
+          >
+            <SearchBar
+              searchTerm={searchTerm}
+              onSearchChange={handleSearchChange}
+              onEnterKeyPress={handleEnterKeyPress}
+              onSearch={handleSearchClick}
+            />
+          </div>
+        </div>
+        <h2
+          style={{
+            width: "100%",
+            fontSize: "40px",
+            fontWeight: "300",
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            padding: "100px 0 30px 0",
+            justifyContent: "center",
+          }}
+        ></h2>
+        <div className={styles.paginationAndDropdown}>
+          <Pagination
+            currentPage={currentPage}
+            prevPage={prevPage}
+            nextPage={nextPage}
+            currentItems={currentItems}
+            itemsPerPage={itemsPerPage}
+          />
+          <SortByDropdown onChange={handleSortChange} />
+        </div>
       </div>
+      <div className={styles.bottomContainer}>
+        <div className={styles.sidebar}>
+          <div className={styles.buttoms}>
+            <a onClick={handleSearchClick}>ALL</a>
+          </div>
+        </div>
+
+        <SearchResult results={currentItems} />
+      </div>
+      <Pagination
+        currentPage={currentPage}
+        prevPage={prevPage}
+        nextPage={nextPage}
+        currentItems={currentItems}
+        itemsPerPage={itemsPerPage}
+      />
+
+      <ScrollToTopButton />
     </div>
   );
 };
