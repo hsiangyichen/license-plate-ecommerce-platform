@@ -13,14 +13,14 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      {/* <video
+      <video
         autoPlay
         muted
         loop
         className={styles.video}
         src={"/videos/men.mp4"}
-      /> */}
-      <div
+      />
+      {/* <div
         style={{
           backgroundColor: "#3C6E71",
           objectFit: "cover",
@@ -29,7 +29,7 @@ export default function Home() {
           width: "100%",
           height: "100vh",
         }}
-      />
+      /> */}
 
       <div className={styles.item}>
         <Navbar />
