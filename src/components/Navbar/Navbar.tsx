@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.logo}>
-        {/* <img src="/images/carplatelogo.jpg" alt="" className={styles.logoImg} /> */}
+        <img src="/images/carplatelogo.jpg" alt="" className={styles.logoImg} />
       </Link>
       <div className={styles.links}>
         {links.map((link) => (

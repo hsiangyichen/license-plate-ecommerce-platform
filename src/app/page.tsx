@@ -20,17 +20,18 @@ export default function Home() {
         className={styles.video}
         src={"/videos/men.mp4"}
       />
-      {/* <div
+      <div
         style={{
-          backgroundColor: "#3C6E71",
+          background:
+            "linear-gradient(90deg, rgba(40, 54, 48, 0.00) 0%, rgba(32, 46, 42, 0.00) 16.67%, rgba(16, 75, 71, 0.37) 34.38%, rgba(16, 75, 71, 0.70) 70.83%, rgba(16, 75, 71, 0.70) 100%)",
           objectFit: "cover",
           objectPosition: "center",
           position: "absolute",
-          width: "100%",
+          right: "0",
+          width: "60%",
           height: "100vh",
         }}
-      /> */}
-
+      />
       <div className={styles.item}>
         <Navbar />
         <div className={styles.itemdown}>
