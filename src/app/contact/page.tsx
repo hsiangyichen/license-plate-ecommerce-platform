@@ -1,8 +1,10 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Navbar } from "@components";
 import styles from "./styles.module.scss";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ContactForm } from "@components/ContactForm";
 
 const Contact = () => {
   return (
@@ -10,7 +12,6 @@ const Contact = () => {
       {/* <img className={styles.img} src={"images/platesingarage.jpg"} /> */}
       <div className={styles.item}>
         <Navbar />
-
         <section className={styles.contact}>
           <div className={styles.content}>
             <h1 className={styles.title}>聯絡我們/合作</h1>
@@ -28,47 +29,7 @@ const Contact = () => {
               </div>
             </div>
             <div className={styles.contactForm}>
-              <form>
-                <h2>Full Name</h2>
-                <div>
-                  <input
-                    className={styles.inputBox}
-                    type="text"
-                    name=""
-                    required
-                  />
-                </div>
-                <h2>Email</h2>
-                <div>
-                  <input
-                    className={styles.inputBox}
-                    type="text"
-                    name=""
-                    required
-                  />
-                </div>
-                <h2>Phone</h2>
-                <div>
-                  <input
-                    className={styles.inputBox}
-                    type="text"
-                    name=""
-                    required
-                  />
-                </div>
-                <h2>Message</h2>
-                <div>
-                  <textarea
-                    className={styles.inputBox}
-                    placeholder="Type your Message..."
-                    required
-                  />
-                  {/* <span>Type your Message...</span> */}
-                </div>
-                <div className={styles.inputBox}>
-                  <input type="submit" name="" value="submit" />
-                </div>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </section>

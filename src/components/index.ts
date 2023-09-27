@@ -6,3 +6,4 @@ export * from "./AboutUs";
 export * from "./SortByDropdown";
 export * from "./ScrollToTopButton";
 export * from "./Pagination";
+export * from "./ContactForm";

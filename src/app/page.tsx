@@ -8,7 +8,6 @@ import ArrowDownIcon from "@assets/icons/arrow-down.svg";
 
 export default function Home() {
   const topRef = React.useRef<HTMLDivElement>(null);
-
   const executeScroll = () => topRef.current?.scrollIntoView();
 
   return (

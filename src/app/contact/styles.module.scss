@@ -10,85 +10,85 @@
   min-height: 100vh;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.img {
-  object-fit: cover;
-  object-position: center;
-  position: absolute;
-  width: 100%;
-  height: 18vh;
-  filter: brightness(15%);
-}
-
-.item {
-  z-index: 1;
-  // height: 50vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.title {
-  color: black;
-  margin: 70px 170px;
-  font-size: 50px;
-}
-
-// .contact {
-//   // position: relative;
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
 // }
 
-.contactwrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  // align-items: center;
-  justify-content: center;
-}
+// .img {
+//   object-fit: cover;
+//   object-position: center;
+//   position: absolute;
+//   width: 100%;
+//   height: 18vh;
+//   filter: brightness(15%);
+// }
 
-.contactInfo {
-  padding: 0 0 0 180px;
-  width: 50%;
-}
+// .item {
+//   z-index: 1;
+//   // height: 50vh;
+//   display: flex;
+//   flex-direction: column;
+// }
 
-.contactForm {
-  padding: 0 0 170px 0;
-  width: 50%;
-}
+// .title {
+//   color: black;
+//   margin: 70px 170px;
+//   font-size: 50px;
+// }
 
-.box {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+// // .contact {
+// //   // position: relative;
+// // }
 
-.iconwrapper {
-  // width: 20px;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  border-radius: 50%;
-  min-width: 40px;
-  height: 40px;
-  // font-size: 16px;
-  margin: 0 20px 0 0;
-}
+// .contactwrapper {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   width: 100%;
+//   // align-items: center;
+//   justify-content: center;
+// }
 
-.icon {
-  width: 20px;
-  height: 20px;
-}
+// .contactInfo {
+//   padding: 0 0 0 180px;
+//   width: 50%;
+// }
 
-.inputBox {
-  width: 60%;
-}
+// .contactForm {
+//   padding: 0 0 170px 0;
+//   width: 50%;
+// }
+
+// .box {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+// }
+
+// .iconwrapper {
+//   // width: 20px;
+//   background-color: black;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: white;
+//   border-radius: 50%;
+//   min-width: 40px;
+//   height: 40px;
+//   // font-size: 16px;
+//   margin: 0 20px 0 0;
+// }
+
+// .icon {
+//   width: 20px;
+//   height: 20px;
+// }
+
+// .inputBox {
+//   width: 60%;
+// }
