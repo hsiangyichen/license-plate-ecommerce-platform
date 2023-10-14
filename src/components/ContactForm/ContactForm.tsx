@@ -25,16 +25,18 @@ const ContactForm: React.FC = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    }).then((res) => {
-      console.log("Response received");
-      if (res.status === 200) {
+    })
+      .then(() => {
+        console.log("Response received");
         console.log("Response succeeded!");
         setSubmitted(true);
         setName("");
         setEmail("");
         setMessage("");
-      }
-    });
+      })
+      .catch((err) => {
+        console.log("err");
+      });
   };
 
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>): void => {

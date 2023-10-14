@@ -26,7 +26,7 @@ const About = () => {
       <section
         style={{
           width: "100%",
-          backgroundColor: "white",
+          backgroundColor: "#ede9e5",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -37,7 +37,7 @@ const About = () => {
         }}
       >
         <div>
-          <LicensePlateIcon width="100" height="100" />
+          <LicensePlateIcon width="80" height="100" />
           <h2>豐富車牌庫</h2>
           <p
             style={{
