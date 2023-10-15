@@ -7,3 +7,4 @@ export * from "./SortByDropdown";
 export * from "./ScrollToTopButton";
 export * from "./Pagination";
 export * from "./ContactForm";
+export * from "./AboutUs";

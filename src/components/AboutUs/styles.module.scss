@@ -1,0 +1,74 @@
+@import "../../app/styles/colors";
+
+.container {
+  height: 100vh;
+  width: 100%;
+  // align-items: center;
+  justify-content: center;
+  background-color: $BackgroundBeige;
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.feature {
+  margin: 0px 450px;
+  position: absolute;
+  top: 15vh;
+  color: $LogoGreen;
+  font-weight: 400;
+  h2 {
+    margin: 0 0 40px 0;
+    font-size: 24px;
+    font-weight: 400;
+    border-bottom: 1.5px solid $LogoGreen;
+    // color: $LogoGreen;
+    // padding-bottom: 1rem;
+  }
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  h3 {
+    padding-bottom: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    color: $LogoGreen;
+  }
+  p {
+    font-size: 20px;
+    color: $Brown;
+    // padding: 20px;
+    font-weight: 400;
+  }
+}
+
+.containerItem {
+  // margin: 0px 450px;
+  display: flex;
+  flex-direction: row;
+  // align-items: center;
+}
+
+.leftItem {
+  // height: 200px;
+  // width: 30%;
+}
+
+.rightItem {
+  padding-left: 60px;
+  // height: inherit;
+  // width: 70%;
+}
+
+// .firstfilter {
+//   // background: linear-gradient(180deg, #1b1d1e 0%, #e4e4e1 100%);
+//   background-color: $BackgroundBlack;
+//   width: 100%;
+//   height: 100vh;
+// }
