@@ -22,7 +22,7 @@ const links = [
   {
     id: 4,
     title: "買賣/續牌須知",
-    url: "/policy",
+    url: "/about#purchase-info",
   },
   {
     id: 5,

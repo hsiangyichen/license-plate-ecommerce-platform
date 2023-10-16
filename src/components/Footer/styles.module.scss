@@ -2,9 +2,17 @@
 
 .container {
   height: 100px;
+  width: 100%;
+  position: relative;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  // justify-items: center;
   align-items: center;
   // color: $White;
   background-color: $White;
 }
+
+// .item {
+//   position: absolute;
+//   top: 10px;
+// }

@@ -1,17 +1,56 @@
 "use client";
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import styles from "./styles.module.scss";
+import Person from "@assets/icons/person.svg";
+import Email from "@assets/icons/email.svg";
+import Phone from "@assets/icons/phone.svg";
+import Instagram from "@assets/icons/instagram.svg";
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
 
 const ContactForm: React.FC = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [submitted, setSubmitted] = useState<boolean>(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
-    e.preventDefault();
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
+
+  const SuccessPopup = () => {
+    return (
+      <div className={styles.popup}>
+        <div className={styles.popupInner}>
+          <h2>Success!</h2>
+          <p>Your message has been submitted successfully.</p>
+        </div>
+
+        <button onClick={closePopup}>Close</button>
+      </div>
+    );
+  };
+
+  const {
+    handleSubmit,
+    control,
+    reset,
+    formState: { errors },
+  } = useForm<FormData>();
+
+  const onSubmit = (e: FormData): void => {
+    console.log(e);
     console.log("Sending");
-
     const data = {
       name,
       email,
@@ -30,60 +69,102 @@ const ContactForm: React.FC = () => {
         console.log("Response received");
         console.log("Response succeeded!");
         setSubmitted(true);
-        setName("");
-        setEmail("");
-        setMessage("");
+        reset();
+
+        openPopup();
       })
       .catch((err) => {
-        console.log("err");
+        console.log("err:" + err);
       });
   };
 
-  const handleNameChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    setName(e.target.value);
-  };
-
-  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    setEmail(e.target.value);
-  };
-
-  const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
-    setMessage(e.target.value);
-  };
-
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          onChange={handleNameChange}
-          value={name}
-          name="name"
-          className={styles.inputField}
-        />
+    <div className={styles.container}>
+      <img className={styles.img} src={"images/contactFormCar.jpg"} />
+      <div className={styles.item}>
+        {/* <h1>CONTACT US / 聯繫我們</h1> */}
+        <div className={styles.form}>
+          <div className={styles.formLeft}>
+            <div className={styles.infoItem}>
+              <Person width="30px" height="30px" fill="rgba(27,29,30,0.4)" />
+              <h2>李生</h2>
+            </div>
+            <div className={styles.infoItem}>
+              <Email width="28px" height="28px" fill="rgba(27,29,30,0.4)" />
+              <h2>218luckynumber@gmail.com</h2>
+            </div>
+            <div className={styles.infoItem}>
+              <Phone width="28px" height="28px" fill="rgba(27,29,30,0.4)" />
+              <h2>9226 5737</h2>
+            </div>
+            <div className={styles.infoItem}>
+              <Instagram width="30px" height="30px" fill="rgba(27,29,30,0.4)" />
+              <h2>218luckynumber</h2>
+            </div>
+          </div>
+          <div className={styles.formRight}>
+            <form onSubmit={handleSubmit(onSubmit)} noValidate>
+              <div className={styles.inputItem}>
+                <Controller
+                  name="name"
+                  control={control}
+                  defaultValue=""
+                  rules={{ required: "Name is required" }}
+                  render={({ field }) => (
+                    <input type="text" placeholder="Name" {...field} />
+                  )}
+                />
+                {errors.name && (
+                  <span className={styles.error}>Name is required</span>
+                )}
+              </div>
+              <div className={styles.inputItem}>
+                <Controller
+                  name="email"
+                  control={control}
+                  defaultValue=""
+                  rules={{
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                      message: "invalid email address",
+                    },
+                  }}
+                  render={({ field }) => (
+                    <input type="email" {...field} placeholder="Email" />
+                  )}
+                />
+                {errors.email && (
+                  <span className={styles.error}>Invalid email address</span>
+                )}
+              </div>
+              <div className={styles.inputItem}>
+                <Controller
+                  name="message"
+                  control={control}
+                  defaultValue=""
+                  rules={{
+                    required: "Message is required",
+                  }}
+                  render={({ field }) => (
+                    <textarea {...field} placeholder="Message" />
+                  )}
+                />
+                {errors.message && (
+                  <span className={styles.error}>Message is required</span>
+                )}
+              </div>
+              <div className={styles.buttonContainer}>
+                <button className={styles.button} type="submit">
+                  Submit
+                </button>
+              </div>
+            </form>
+            <div>{isPopupOpen && <SuccessPopup />}</div>
+          </div>
+        </div>
       </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          onChange={handleEmailChange}
-          value={email}
-          name="email"
-          className={styles.inputField}
-        />
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label>
-        <textarea
-          onChange={handleMessageChange}
-          value={message}
-          name="message"
-          className={styles.inputField}
-        />
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+    </div>
   );
 };
 

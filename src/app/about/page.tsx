@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, AboutUs } from "@components";
+import { Navbar, AboutUs, ContactForm } from "@components";
 import styles from "./styles.module.scss";
 
 const About = () => {
@@ -32,7 +32,7 @@ const About = () => {
         </div>
       </div>
       <AboutUs />
-      <div className={styles.shouldKnow}>
+      <div id="purchase-info" className={styles.shouldKnow}>
         <h2>買賣/續牌須知</h2>
         <div className={styles.shouldKnowItem}>
           <h3>車牌買賣</h3>
@@ -66,6 +66,10 @@ const About = () => {
           </p>
         </div>
       </div>
+      <div className={styles.contactUs}>
+        <h1>CONTACT US / 聯繫我們</h1>
+      </div>
+      <ContactForm />
     </div>
   );
 };
