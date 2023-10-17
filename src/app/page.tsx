@@ -29,9 +29,6 @@ export default function Home() {
                 <br />
                 你的專屬車牌
               </h1>
-              {/* <p style={{ fontSize: "24px", fontWeight: "300" }}>
-              Find Your Lucky Plate Number
-            </p> */}
             </div>
           </div>
           <a onClick={executeScroll} className={styles.downArrow}>
