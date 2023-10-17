@@ -14,9 +14,6 @@ interface FormData {
 }
 
 const ContactForm: React.FC = () => {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
   const [submitted, setSubmitted] = useState<boolean>(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -49,13 +46,8 @@ const ContactForm: React.FC = () => {
   } = useForm<FormData>();
 
   const onSubmit = (e: FormData): void => {
-    console.log(e);
+    console.log("e", e);
     console.log("Sending");
-    const data = {
-      name,
-      email,
-      message,
-    };
 
     fetch("/api/contact", {
       method: "POST",
@@ -63,7 +55,7 @@ const ContactForm: React.FC = () => {
         Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(e),
     })
       .then(() => {
         console.log("Response received");
