@@ -19,34 +19,23 @@ const Pagination: React.FC<PaginationProps> = ({
   currentItems,
   itemsPerPage,
 }) => {
+  // const closePopup = () => {
+  //   console.log("yyy");
+  // };
+
   return (
-    <div
-      style={{
-        margin: "20px 170px",
-        display: "flex",
-        alignItems: "center",
-        flexDirection: "row",
-      }}
-      className={styles.pagination}
-    >
+    <div className={styles.paginationContainer}>
       <button
-        style={{
-          backgroundColor: "transparent",
-          border: "none",
-          cursor: "pointer",
-        }}
+        className={styles.paginationButton}
         onClick={prevPage}
         disabled={currentPage === 1}
       >
         <ArrowLeftIcon />
       </button>
-      <span style={{ width: "30px", textAlign: "center" }}>{currentPage}</span>
+      <span className={styles.pageNumber}>{currentPage}</span>
       <button
-        style={{
-          backgroundColor: "transparent",
-          border: "none",
-          cursor: "pointer",
-        }}
+        className={styles.paginationButton}
+        // onClick={closePopup}
         onClick={nextPage}
         disabled={currentItems.length < itemsPerPage}
       >

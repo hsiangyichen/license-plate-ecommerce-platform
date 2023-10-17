@@ -22,13 +22,11 @@
   }
 }
 
-.contactUs {
+.shop {
   position: relative;
   background-color: $BackgroundBeige;
   display: flex;
-  // align-items: center;
   flex-direction: column;
-  // overflow: hidden;
   h1 {
     margin: 120px 0 0px 300px;
     font-size: 30px;
@@ -36,11 +34,14 @@
     color: $BackgroundBlack;
   }
 }
+
 .item {
+  position: relative;
   z-index: 1;
   width: 100%;
   background-color: $BackgroundBeige;
   overflow: hidden;
+  height: 30vh;
   .searchBar {
     margin-left: 300px;
     padding-top: 30px;
@@ -56,33 +57,15 @@
   width: 100%;
   justify-content: center;
   background-color: $BackgroundBeige;
+  // min-height: 100vh;
 }
 
 .sidebarAndResults {
-  display: flex;
+  // display: flex;
   max-width: 1500px;
-  min-width: 500px;
+  min-width: 650px;
   margin: 0 300px;
-  gap: 20px;
-}
-
-.sidebar {
-  width: 50%;
-  background-color: rgba(27, 29, 30, 0.15);
-  .button {
-    color: $BackgroundBlack;
-    margin: 45px 80px;
-    padding: 5px;
-    cursor: pointer;
-    &:hover {
-      opacity: 50%;
-    }
-  }
-  a {
-    color: $BackgroundBlack;
-    font-size: 17px;
-    font-family: Inter;
-  }
+  // gap: 20px;
 }
 
 .aboutUsFilter {

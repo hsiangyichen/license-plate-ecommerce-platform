@@ -22,15 +22,19 @@ const Purchase = () => {
   const [searchTriggered, setSearchTriggered] = useState<boolean>(false);
   const [selectedSortOption, setSelectedSortOption] =
     useState<string>("default");
+
   // Add pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemsPerPage: number = 57;
+  const itemsPerPage: number = 87;
+
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     fetch("/data/carPlatesData.json")
       .then((res) => res.json())
       .then((res) => {
         setResponseData(res); // Holds original responseData
+        setLoading(false);
       });
   }, []);
 
@@ -105,11 +109,15 @@ const Purchase = () => {
   };
 
   const nextPage = () => {
-    setCurrentPage((prevPage) => prevPage + 1);
+    if (currentPage < Math.ceil(sortedResults.length / itemsPerPage)) {
+      setCurrentPage(currentPage + 1);
+    }
   };
 
   const prevPage = () => {
-    setCurrentPage((prevPage) => prevPage - 1);
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
   };
 
   const currentItems = calculateCurrentPageItems();
@@ -119,7 +127,7 @@ const Purchase = () => {
       <div className={styles.aboutUsFilter}></div>
       <Navbar />
       <div className={styles.item}>
-        <div className={styles.contactUs}>
+        <div className={styles.shop}>
           <h1>SHOP / 購買車牌</h1>
         </div>
         <div className={styles.searchBar}>
@@ -131,33 +139,22 @@ const Purchase = () => {
           />
         </div>
         <div className={styles.paginationAndDropdown}>
-          {/* <Pagination
-            currentPage={currentPage}
-            prevPage={prevPage}
-            nextPage={nextPage}
-            currentItems={currentItems}
-            itemsPerPage={itemsPerPage}
-          /> */}
           <SortByDropdown onChange={handleSortChange} />
         </div>
       </div>
+
       <div className={styles.bottomContainer}>
         <div className={styles.sidebarAndResults}>
-          <div className={styles.sidebar}>
-            <div className={styles.button}>
-              <a onClick={handleSearchClick}>ALL</a>
-            </div>
-          </div>
-          <SearchResult results={currentItems} />
+          <SearchResult results={currentItems} loading={loading} />
         </div>
       </div>
-      {/* <Pagination
+      <Pagination
         currentPage={currentPage}
         prevPage={prevPage}
         nextPage={nextPage}
         currentItems={currentItems}
         itemsPerPage={itemsPerPage}
-      /> */}
+      />
       <ScrollToTopButton />
     </div>
   );
