@@ -101,7 +101,7 @@
 }
 
 .shouldKnowContainer {
-  padding: 280px 450px 0px 450px;
+  padding: 120px 450px 0px 450px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -110,7 +110,7 @@
 }
 
 .shouldKnow {
-  height: 65vh;
+  height: 100vh;
   width: 1342px;
   position: relative;
   display: flex;
@@ -143,7 +143,7 @@
   display: flex;
   align-items: center;
   h1 {
-    margin: 150px 0 20px 300px;
+    margin: 0px 0 20px 300px;
     font-size: 30px;
     font-weight: 300;
     color: $BackgroundBlack;
