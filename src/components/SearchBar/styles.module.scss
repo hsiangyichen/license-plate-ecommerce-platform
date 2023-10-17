@@ -5,18 +5,21 @@
   // margin: 20px 170px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   min-width: 200px;
 }
 
 .searchbarwrapper {
-  background-color: transparent;
+  // background-color: transparent;
+  background-color: $White;
   width: 100%;
-  border: 1px solid black;
+  height: 46px;
+  border: 0;
+  // border: 1px solid black;
   // padding: 10px 0px;
   display: flex;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 23px;
 }
 
 .input {
@@ -24,18 +27,15 @@
   border: none;
   height: 100%;
   font-size: 16px;
-  font-weight: 300;
+  font-family: Inter;
   width: 100%;
-  margin-left: 15px;
+  margin-left: 24px;
   &:focus {
     outline: none;
   }
 }
 
 .searchIcon {
-  font-size: 25px;
-  margin: 5px;
-  padding: 2px;
+  margin-right: 15px;
   cursor: pointer;
-  // border-radius: 30px;
 }

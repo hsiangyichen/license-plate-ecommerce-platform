@@ -9,12 +9,13 @@ const About = () => {
       <div className={styles.firstFilter}></div>
       <img className={styles.img} src={"images/aboutUs.jpg"} />
       <Navbar />
-      <div className={styles.item}>
-        <div className={styles.body}>
-          <h1>ABOUT US / 關於我們</h1>
-          <div className={styles.intro}>
+      <div className={styles.intoContainer}>
+        <div className={styles.intro}>
+          <div className={styles.introTitle}>
+            <h1>ABOUT US / 關於我們</h1>
+          </div>
+          <div className={styles.introItem}>
             <h2>簡介&服務</h2>
-
             <p>
               “218 幸運車牌”
               是一家專業的車牌買賣公司，提供全面的車牌交易服務。218致力於讓車牌交易變得簡單、快捷和安全。無論您是想買一個獨特的車牌號碼，還是需要出售或轉讓您現有的車牌，我們的團隊將全程協助您完成交易手續。
@@ -32,40 +33,43 @@ const About = () => {
         </div>
       </div>
       <AboutUs />
-      <div id="purchase-info" className={styles.shouldKnow}>
-        <h2>買賣/續牌須知</h2>
-        <div className={styles.shouldKnowItem}>
-          <h3>車牌買賣</h3>
-          <p>
-            身分證正本（私人）
-            <br />
-            三個月住址證明（私人）
-            <br />
-            有限公司註冊證副本 C.I. copy（公司登記）
-            <br />
-            商業登記（公司登記）
-            <br />
-            公司蓋章（公司登記）
-            <br />
-          </p>
-        </div>
-        <div className={styles.shouldKnowItem}>
-          <h3>留牌紙續期/轉名/續牌費</h3>
-          <p>
-            留牌紙正本（私人/公司）
-            <br />
-            行車證正本（私人/公司）
-            <br />
-            身分證副本（私人）
-            <br />
-            三個月住址證明 （私人）
-            <br />
-            有限公司註冊證副本 C.I. copy（公司）
-            <br />
-            公司蓋章（公司）
-          </p>
+      <div id="purchase-info" className={styles.shouldKnowContainer}>
+        <div className={styles.shouldKnow}>
+          <h2>買賣/續牌須知</h2>
+          <div className={styles.shouldKnowItem}>
+            <h3>車牌買賣</h3>
+            <p>
+              身分證正本（私人）
+              <br />
+              三個月住址證明（私人）
+              <br />
+              有限公司註冊證副本 C.I. copy（公司登記）
+              <br />
+              商業登記（公司登記）
+              <br />
+              公司蓋章（公司登記）
+              <br />
+            </p>
+          </div>
+          <div className={styles.shouldKnowItem}>
+            <h3>留牌紙續期/轉名/續牌費</h3>
+            <p>
+              留牌紙正本（私人/公司）
+              <br />
+              行車證正本（私人/公司）
+              <br />
+              身分證副本（私人）
+              <br />
+              三個月住址證明 （私人）
+              <br />
+              有限公司註冊證副本 C.I. copy（公司）
+              <br />
+              公司蓋章（公司）
+            </p>
+          </div>
         </div>
       </div>
+
       <div className={styles.contactUs}>
         <h1>CONTACT US / 聯繫我們</h1>
       </div>

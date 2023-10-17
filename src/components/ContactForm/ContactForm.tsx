@@ -82,7 +82,6 @@ const ContactForm: React.FC = () => {
     <div className={styles.container}>
       <img className={styles.img} src={"images/contactFormCar.jpg"} />
       <div className={styles.item}>
-        {/* <h1>CONTACT US / 聯繫我們</h1> */}
         <div className={styles.form}>
           <div className={styles.formLeft}>
             <div className={styles.infoItem}>

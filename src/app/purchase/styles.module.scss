@@ -1,14 +1,16 @@
 @import "../styles/colors";
 
 .container {
-  background-color: $White;
-  // background-color: rgb(176, 164, 158);
+  background-color: $BackgroundBlack;
+  color: $BackgroundBlack;
   position: relative;
   display: flex;
   flex-direction: column;
   animation-fill-mode: forwards;
   animation: fadeIn 1.5s;
   min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 @keyframes fadeIn {
@@ -20,62 +22,80 @@
   }
 }
 
-.img {
-  object-fit: cover;
-  object-position: center;
-  position: absolute;
-  width: 100%;
-  height: 18vh;
-  // filter: brightness(15%);
-  // background-color: rgb(176, 164, 158);
+.contactUs {
+  position: relative;
+  background-color: $BackgroundBeige;
+  display: flex;
+  // align-items: center;
+  flex-direction: column;
+  // overflow: hidden;
+  h1 {
+    margin: 120px 0 0px 300px;
+    font-size: 30px;
+    font-weight: 300;
+    color: $BackgroundBlack;
+  }
 }
-
 .item {
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.paginationAndDropdown {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  // margin: 150px 0 0 0;
-}
-
-.title {
-  color: black;
-  margin: 70px 170px;
-  font-size: 50px;
-}
-
-.desc {
-  color: black;
-  margin: 0 170px;
+  width: 100%;
+  background-color: $BackgroundBeige;
+  overflow: hidden;
+  .searchBar {
+    margin-left: 300px;
+    padding-top: 30px;
+  }
+  .paginationAndDropdown {
+    margin-left: 300px;
+    padding: 30px 0;
+  }
 }
 
 .bottomContainer {
   display: flex;
-  flex-direction: row;
   width: 100%;
-  gap: 3px;
-  padding: 0 170px;
+  justify-content: center;
+  background-color: $BackgroundBeige;
+}
+
+.sidebarAndResults {
+  display: flex;
+  max-width: 1500px;
+  min-width: 500px;
+  margin: 0 300px;
+  gap: 20px;
 }
 
 .sidebar {
-  // display: flex;
-  // flex-direction: row;
-  width: 25%;
-  background-color: white;
-  border: 1px solid black;
-  .buttoms {
-    margin: 40px 50px;
-  }
-  a {
-    color: rgb(166, 164, 155);
+  width: 50%;
+  background-color: rgba(27, 29, 30, 0.15);
+  .button {
+    color: $BackgroundBlack;
+    margin: 45px 80px;
+    padding: 5px;
     cursor: pointer;
     &:hover {
-      color: rgb(80, 80, 78);
+      opacity: 50%;
     }
   }
+  a {
+    color: $BackgroundBlack;
+    font-size: 17px;
+    font-family: Inter;
+  }
+}
+
+.aboutUsFilter {
+  background: linear-gradient(
+    180deg,
+    rgba(16, 75, 71, 0.6) 0%,
+    rgba(33, 51, 50, 0.6) 19.27%,
+    rgba(27, 29, 30, 0.6) 52.08%
+  );
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 35vh;
 }

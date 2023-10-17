@@ -116,128 +116,48 @@ const Purchase = () => {
 
   return (
     <div className={styles.container}>
-      {/* <img className={styles.img} src={"images/platesingarage.jpg"} /> */}
-      <div className={styles.img}></div>
+      <div className={styles.aboutUsFilter}></div>
+      <Navbar />
       <div className={styles.item}>
-        <Navbar />
-        {/* <h1 className={styles.title}>Find Your Own Car Plate</h1>
-        <p className={styles.desc}>Explore the car plates that you like</p> */}
-        <div
-          style={{
-            overflow: "hidden",
-            width: "100%",
-            height: "82vh",
-            position: "relative",
-          }}
-        >
-          <div>
-            <img
-              src={"images/car4.jpg"}
-              alt="Car Plates"
-              style={{
-                objectPosition: "center center",
-                objectFit: "cover",
-                width: "68%",
-                height: "70%",
-                position: "absolute",
-                bottom: "0px",
-                right: "0px",
-              }}
-            />
-          </div>
-          <div
-            style={{
-              position: "absolute",
-              top: "0px",
-              left: "0px",
-              width: "70%",
-              height: "65vh",
-              overflow: "hidden",
-              display: "flex",
-              flexDirection: "column",
-              padding: "100px",
-              // backgroundColor: "rgb(42, 45, 50)",
-              justifyContent: "center",
-            }}
-          >
-            <h1
-              style={{
-                fontSize: "135px",
-                fontWeight: "300",
-              }}
-            >
-              Find Your Own Car Plate
-            </h1>
-            <p
-              style={{
-                fontSize: "25px",
-              }}
-            >
-              Explore the car plates that you like
-            </p>
-          </div>
-          <div
-            style={{
-              position: "absolute",
-              bottom: "0px",
-              left: "0px",
-              width: "100%",
-              // height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              padding: "90px 170px",
-              // backgroundColor: "rgb(42, 45, 50)",
-              justifyContent: "center",
-            }}
-          >
-            <SearchBar
-              searchTerm={searchTerm}
-              onSearchChange={handleSearchChange}
-              onEnterKeyPress={handleEnterKeyPress}
-              onSearch={handleSearchClick}
-            />
-          </div>
+        <div className={styles.contactUs}>
+          <h1>SHOP / 購買車牌</h1>
         </div>
-        <h2
-          style={{
-            width: "100%",
-            fontSize: "40px",
-            fontWeight: "300",
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
-            padding: "100px 0 30px 0",
-            justifyContent: "center",
-          }}
-        ></h2>
+        <div className={styles.searchBar}>
+          <SearchBar
+            searchTerm={searchTerm}
+            onSearchChange={handleSearchChange}
+            onEnterKeyPress={handleEnterKeyPress}
+            onSearch={handleSearchClick}
+          />
+        </div>
         <div className={styles.paginationAndDropdown}>
-          <Pagination
+          {/* <Pagination
             currentPage={currentPage}
             prevPage={prevPage}
             nextPage={nextPage}
             currentItems={currentItems}
             itemsPerPage={itemsPerPage}
-          />
+          /> */}
           <SortByDropdown onChange={handleSortChange} />
         </div>
       </div>
       <div className={styles.bottomContainer}>
-        <div className={styles.sidebar}>
-          <div className={styles.buttoms}>
-            <a onClick={handleSearchClick}>ALL</a>
+        <div className={styles.sidebarAndResults}>
+          <div className={styles.sidebar}>
+            <div className={styles.button}>
+              <a onClick={handleSearchClick}>ALL</a>
+            </div>
           </div>
+          <SearchResult results={currentItems} />
         </div>
-
-        <SearchResult results={currentItems} />
       </div>
-      <Pagination
+      {/* <Pagination
         currentPage={currentPage}
         prevPage={prevPage}
         nextPage={nextPage}
         currentItems={currentItems}
         itemsPerPage={itemsPerPage}
-      />
-
+      /> */}
       <ScrollToTopButton />
     </div>
   );

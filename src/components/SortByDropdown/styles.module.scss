@@ -3,26 +3,23 @@
 .sortByContainer {
   display: flex;
   align-items: center;
-  margin: 20px 170px;
-  // margin-top: 10px;
+  margin-top: 5px;
 }
 
 .sortByContainer label {
   margin-right: 5px;
-  font-size: 14px;
-
-  // font-weight: bold;
+  font-size: 15px;
 }
 
 .sortSelect {
-  // padding: 0 10px;
+  margin: 10px;
+  padding: 2px;
   border: none;
   width: 140px;
-  // appearance: none; /* Remove the default arrow icon in some browsers */
-  // border: none; /* Remove border */
-  outline: none; /* Remove outline */
+  // height: 18px;
+  outline: none;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 14px;
   cursor: pointer;
 }
@@ -32,6 +29,5 @@
 }
 
 .sortSelect option {
-  font-size: 14px;
   background-color: #fff;
 }

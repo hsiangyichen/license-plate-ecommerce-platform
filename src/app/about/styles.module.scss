@@ -30,34 +30,45 @@
   filter: grayness(40%);
 }
 
-.body {
-  overflow: hidden;
-}
-
-.item {
-  z-index: 1;
-  width: 100%;
+.introTitle {
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  overflow: hidden;
-  height: 82vh;
   h1 {
-    margin: 120px 300px 50px 300px;
+    margin: 120px 0 120px 300px;
     font-size: 30px;
     font-weight: 300;
+    color: $White;
   }
+}
+
+.intoContainer {
+  height: 85vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .intro {
-  margin: 0px 450px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  overflow: hidden;
+  height: 75vh;
+}
+
+.introItem {
   h2 {
-    margin: 0 0 40px 0;
+    margin: 0 450px 40px 450px;
     font-size: 24px;
     font-weight: 400;
-    border-bottom: 1.5px solid white;
+    border-bottom: 2px solid white;
   }
   p {
+    margin: 0 450px 40px 450px;
     font-size: 18px;
     font-weight: 300;
     margin-bottom: 100px;
@@ -85,15 +96,25 @@
   position: absolute;
   top: 35vh;
   width: 100%;
-  height: 65vh;
+  height: 75vh;
   background: linear-gradient(180deg, #1b1d1e 0%, #e4e4e1 100%);
 }
 
-.shouldKnow {
-  padding: 120px 450px 50px 450px;
-  // height: 100vh;
+.shouldKnowContainer {
+  padding: 280px 450px 0px 450px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: $BackgroundBeige;
+}
+
+.shouldKnow {
+  height: 65vh;
+  width: 1342px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   h2 {
     margin: 0 0 40px 0;
@@ -110,7 +131,7 @@
   }
   p {
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 100px;
     color: $Brown;
   }
@@ -121,9 +142,8 @@
   background-color: $BackgroundBeige;
   display: flex;
   align-items: center;
-  // overflow: hidden;
   h1 {
-    margin: 120px 0 20px 300px;
+    margin: 150px 0 20px 300px;
     font-size: 30px;
     font-weight: 300;
     color: $BackgroundBlack;
