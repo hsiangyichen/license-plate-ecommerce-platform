@@ -47,7 +47,7 @@ const Navbar = () => {
             alt=""
             className={styles.logoImg}
           />
-        </Link>{" "}
+        </Link>
         <a href="#" className={styles.toggleButton} onClick={toggleMenu}>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>
