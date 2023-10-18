@@ -377,7 +377,7 @@
     object-position: center;
     height: 58vh;
     position: absolute;
-    top: 12vh;
+    top: 15vh;
   }
 
   .homeFilter {
@@ -393,7 +393,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    height: 70vh;
+    height: 75vh;
     z-index: 0;
   }
 
@@ -427,7 +427,7 @@
     display: flex;
     justify-content: flex-start;
     position: absolute;
-    top: 18vh;
+    top: 22vh;
     left: 50px;
     color: rgba(255, 255, 255, 0.9);
     padding: 0;
@@ -457,6 +457,7 @@
   .downArrow {
     position: initial;
     text-align: center;
+    padding-bottom: 5px;
     width: 100%;
     z-index: 1;
     -webkit-animation: arrowDown 1.5s infinite;
