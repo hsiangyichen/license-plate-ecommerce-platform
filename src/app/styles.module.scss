@@ -458,6 +458,7 @@
     text-align: center;
     width: 100%;
     top: 65vh;
+    z-index: 1;
     -webkit-animation: arrowDown 1.5s infinite;
     animation: arrowDown 1.5s infinite;
     animation-delay: 0.8s;
@@ -476,7 +477,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
+    // position: relative;
   }
 
   .aboutUsfilter {
@@ -549,27 +550,24 @@
   .car1 {
     object-fit: cover;
     object-position: center;
-    position: absolute;
-    top: 0vh;
-    left: 30%;
-    height: 100%;
+    position: initial;
+    width: 33.4%;
+    height: 70%;
   }
 
   .car2 {
     object-fit: cover;
     object-position: center;
-    position: absolute;
-    top: 2vh;
-    // left: 0;
+    position: initial;
+    width: 33.4%;
     height: 70%;
   }
 
   .car3 {
     object-fit: cover;
     object-position: center;
-    position: absolute;
-    bottom: 2vh;
-    left: 70%;
+    position: initial;
+    width: 33.4%;
     height: 70%;
   }
 
