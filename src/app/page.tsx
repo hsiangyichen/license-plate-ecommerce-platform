@@ -37,6 +37,7 @@ export default function Home() {
         </div>
         <div className={styles.homeFilter} />
       </div>
+
       <div id="aboutus" ref={topRef} className={styles.aboutusContainer}>
         <div className={styles.aboutusLeft}>
           <h2>ABOUT US / 關於我們</h2>
@@ -66,12 +67,13 @@ export default function Home() {
           <img className={styles.car2} src={"images/car2.jpg"} />
           <img className={styles.car1} src={"images/car1.jpg"} />
         </div>
+        <div className={styles.aboutUsfilter}></div>
       </div>
+
       <WhyChooseUs />
       <div className={styles.navigate}>
         <p>
           請瀏覽我們的網頁了解更多公司和服務信息。有任何問題或需要幫助，請隨時聯繫我們團隊。
-          <br />
           感謝您選擇我們，期待為您提供卓越的車牌交易體驗！
         </p>
       </div>

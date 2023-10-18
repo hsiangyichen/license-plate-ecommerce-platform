@@ -1,4 +1,4 @@
-import { Footer } from "@components";
+import { Footer, Navbar } from "@components";
 import "./styles/global.scss";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";

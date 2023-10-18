@@ -1,15 +1,13 @@
 @import "../../app/styles/colors";
 
 .container {
-  height: 18vh;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  height: 18vh;
   padding: 0 250px 0 240px;
-  overflow: hidden;
-
-  // color: black;
-  // background-color: #353535;
 }
 
 .logoImg {
@@ -17,7 +15,6 @@
   position: relative;
   left: 0px;
   top: 8px;
-  // background-color: rgb(176, 164, 158);
 }
 
 .links {
@@ -51,6 +48,77 @@
     &:hover::after {
       opacity: 0.8;
       transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+.toggleButton {
+  position: absolute;
+  right: 1.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.toggleButton .bar {
+  height: 2px;
+  width: 100%;
+  background-color: $White;
+  border-radius: 10px;
+}
+
+/* Styles for phones */
+@media screen and (max-width: 390px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    padding: 0;
+  }
+
+  .logoAndButton {
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .logoImg {
+    width: 15vh;
+  }
+  .toggleButton {
+    display: flex;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .burgerLinks {
+    display: flex;
+    gap: 0px;
+    font-size: 16px;
+    background-color: $BackgroundBlack;
+    color: $White;
+    width: 100%;
+    // align-items: center;
+    flex-direction: column;
+    .link {
+      text-decoration: none;
+      padding: 20px;
+      &:hover {
+        opacity: 65%;
+        border-bottom: 0.5px solid $White;
+      }
     }
   }
 }

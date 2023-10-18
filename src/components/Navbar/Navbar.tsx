@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 
 const links = [
@@ -32,18 +32,49 @@ const links = [
 ];
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className={styles.container}>
-      <Link href="/" className={styles.logo}>
-        <img src="/images/carplatelogo.jpg" alt="" className={styles.logoImg} />
-      </Link>
-      <div className={styles.links}>
-        {links.map((link) => (
-          <Link key={link.id} href={link.url} className={styles.link}>
-            <span>{link.title}</span>
-          </Link>
-        ))}
+      <div className={styles.logoAndButton}>
+        <Link href="/" className={styles.logo}>
+          <img
+            src="/images/carplatelogo.jpg"
+            alt=""
+            className={styles.logoImg}
+          />
+        </Link>{" "}
+        <a href="#" className={styles.toggleButton} onClick={toggleMenu}>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+        </a>
       </div>
+
+      <nav>
+        {isOpen ? (
+          <div className={styles.burgerLinks}>
+            {links.map((link) => (
+              <Link key={link.id} href={link.url} className={styles.link}>
+                <span>{link.title}</span>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div></div>
+        )}
+        <div className={styles.links}>
+          {links.map((link) => (
+            <Link key={link.id} href={link.url} className={styles.link}>
+              <span>{link.title}</span>
+            </Link>
+          ))}
+        </div>
+      </nav>
     </div>
   );
 };
