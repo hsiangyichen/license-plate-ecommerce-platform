@@ -8,6 +8,7 @@
   width: 100%;
   justify-content: center;
   align-items: center;
+  background-color: $BackgroundBlack;
   // min-height: 100vh;
 }
 
@@ -393,6 +394,7 @@
     top: 0;
     width: 100%;
     height: 70vh;
+    z-index: 0;
   }
 
   .item {
@@ -453,10 +455,9 @@
   }
 
   .downArrow {
-    position: absolute;
+    position: initial;
     text-align: center;
     width: 100%;
-    top: 65vh;
     z-index: 1;
     -webkit-animation: arrowDown 1.5s infinite;
     animation: arrowDown 1.5s infinite;
@@ -490,7 +491,7 @@
       rgba(27, 29, 30, 0) 100%
     );
     position: absolute;
-    top: 0vh;
+    top: 80vh;
   }
 
   .aboutusLeft {
