@@ -56,72 +56,72 @@
   padding-left: 60px;
 }
 
-@media (max-width: 390px) {
-  .container {
-    // height: max-content;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    min-height: 130vh;
-    width: 100%;
-    background-color: $BackgroundBeige;
-    overflow: hidden;
-  }
+// @media (max-width: 390px) {
+//   .container {
+//     // height: max-content;
+//     // display: flex;
+//     // justify-content: center;
+//     // align-items: center;
+//     min-height: 130vh;
+//     width: 100%;
+//     background-color: $BackgroundBeige;
+//     overflow: hidden;
+//   }
 
-  .feature {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: 10vh;
-    color: $LogoGreen;
-    font-weight: 400;
-    h2 {
-      margin: 0;
-      font-size: 24px;
-      font-weight: 400;
-      border-bottom: 2px solid $LogoGreen;
-    }
-  }
+//   .feature {
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     top: 10vh;
+//     color: $LogoGreen;
+//     font-weight: 400;
+//     h2 {
+//       margin: 0;
+//       font-size: 24px;
+//       font-weight: 400;
+//       border-bottom: 2px solid $LogoGreen;
+//     }
+//   }
 
-  .section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    display: flex;
-    padding: 50px;
-    // height: 90vh;
-    // overflow: hidden;
-    // align-items: center;
-    // justify-content: center;
-    gap: 60px;
+//   .section {
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     text-align: center;
+//     display: flex;
+//     padding: 50px;
+//     // height: 90vh;
+//     // overflow: hidden;
+//     // align-items: center;
+//     // justify-content: center;
+//     gap: 60px;
 
-    h3 {
-      padding-bottom: 0px;
-      font-size: 20px;
-      font-weight: 400;
-      color: $LogoGreen;
-    }
-    p {
-      font-size: 14px;
-      color: $Brown;
-      // padding: 20px;
-      font-weight: 400;
-    }
-  }
+//     h3 {
+//       padding-bottom: 0px;
+//       font-size: 20px;
+//       font-weight: 400;
+//       color: $LogoGreen;
+//     }
+//     p {
+//       font-size: 14px;
+//       color: $Brown;
+//       // padding: 20px;
+//       font-weight: 400;
+//     }
+//   }
 
-  .containerItem {
-    display: flex;
-    flex-direction: column;
-    // flex-direction: row;
-  }
+//   .containerItem {
+//     display: flex;
+//     flex-direction: column;
+//     // flex-direction: row;
+//   }
 
-  // .leftItem {
-  // }
+//   // .leftItem {
+//   // }
 
-  .rightItem {
-    padding-left: 0px;
-  }
-}
+//   .rightItem {
+//     padding-left: 0px;
+//   }
+// }
