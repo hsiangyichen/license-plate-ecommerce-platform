@@ -4,12 +4,10 @@ import styles from "./styles.module.scss";
 
 const About = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.aboutUsFilter}></div>
-      <div className={styles.firstFilter}></div>
-      <img className={styles.img} src={"images/aboutUs.jpg"} />
-      <Navbar />
+    <div>
       <div className={styles.intoContainer}>
+        <img className={styles.img} src={"images/aboutUs.jpg"} />
+        <Navbar />
         <div className={styles.intro}>
           <div className={styles.introTitle}>
             <h1>ABOUT US / 關於我們</h1>
@@ -31,6 +29,8 @@ const About = () => {
             </p>
           </div>
         </div>
+        <div className={styles.aboutUsFilter}></div>
+        {/* <div className={styles.firstFilter}></div> */}
       </div>
       <AboutUs />
       <div id="purchase-info" className={styles.shouldKnowContainer}>
