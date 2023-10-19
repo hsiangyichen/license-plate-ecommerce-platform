@@ -1,7 +1,7 @@
 @import "../../app/styles/colors";
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   justify-content: center;
   background-color: $BackgroundBeige;
@@ -62,7 +62,7 @@
     // display: flex;
     // justify-content: center;
     // align-items: center;
-    height: 130vh;
+    min-height: 130vh;
     width: 100%;
     background-color: $BackgroundBeige;
     overflow: hidden;
