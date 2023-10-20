@@ -8,7 +8,6 @@ import WalletIconSmall from "@assets/icons/wallets-small.svg";
 const AboutUs = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.firstfilter}></div>
       <div className={styles.feature}>
         <h2>我們的特色</h2>
         <section className={styles.section}>

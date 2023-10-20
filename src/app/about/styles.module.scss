@@ -1,11 +1,6 @@
 @import "../styles/colors";
 
 .container {
-  background-color: $BackgroundBlack;
-  color: $White;
-  position: relative;
-  display: flex;
-  flex-direction: column;
   animation-fill-mode: forwards;
   animation: fadeIn 1.5s;
   min-height: 100vh;
@@ -33,9 +28,10 @@
 .introTitle {
   position: relative;
   display: flex;
-  align-items: center;
+  background-color: $BackgroundBlack;
+  height: 25vh;
   h1 {
-    margin: 120px 0 120px 300px;
+    margin: 120px 0 80px 300px;
     font-size: 30px;
     font-weight: 300;
     color: $White;
@@ -43,35 +39,34 @@
 }
 
 .intoContainer {
-  height: 85vh;
+  height: auto;
+  overflow: hidden;
   width: 100%;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  color: $White;
+  background-color: $BackgroundBlack;
 }
 
 .intro {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  overflow: hidden;
-  height: 75vh;
 }
 
 .introItem {
+  padding: 120px 450px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(180deg, #1b1d1e 0%, #e4e4e1 100%);
   h2 {
-    margin: 0 450px 40px 450px;
     font-size: 24px;
     font-weight: 400;
     border-bottom: 2px solid white;
   }
   p {
-    margin: 0 450px 40px 450px;
+    padding-top: 20px;
     font-size: 18px;
     font-weight: 300;
-    margin-bottom: 100px;
   }
 }
 
@@ -82,26 +77,11 @@
     rgba(33, 51, 50, 0.6) 19.27%,
     rgba(27, 29, 30, 0.6) 52.08%
   );
-  object-fit: cover;
-  object-position: center;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 35vh;
-}
-
-.firstFilter {
-  object-fit: cover;
-  object-position: center;
-  position: absolute;
-  top: 35vh;
-  width: 100%;
-  height: 75vh;
-  background: linear-gradient(180deg, #1b1d1e 0%, #e4e4e1 100%);
 }
 
 .shouldKnowContainer {
-  padding: 120px 450px 0px 450px;
+  position: relative;
+  padding: 120px 450px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -110,14 +90,12 @@
 }
 
 .shouldKnow {
-  height: 100vh;
   width: 1342px;
   position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   h2 {
-    margin: 0 0 40px 0;
     font-size: 24px;
     font-weight: 400;
     color: $LogoGreen;
@@ -137,6 +115,30 @@
   }
 }
 
+.shouldKnowItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    text-align: center;
+    padding: 0px;
+    padding-top: 30px;
+    font-weight: 400;
+    color: $LogoGreen;
+  }
+  ul {
+    list-style-type: square;
+    padding: 0;
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    color: $Brown;
+  }
+}
+
 .contactUs {
   position: relative;
   background-color: $BackgroundBeige;
@@ -150,11 +152,313 @@
   }
 }
 
-/* Styles for tablets */
-@media (max-width: 1320px) {
+/* Styles for tablet */
+@media screen and (max-width: 1640px) {
+  .img {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 45vh;
+    width: 100%;
+    opacity: 10%;
+    filter: grayness(40%);
+  }
 }
 
-// /* Styles for phones */
-// @media screen and (max-width: 1320px) {
-//   /* Your phone styles here */
-// }
+/* Styles for tablet */
+@media screen and (max-width: 1440px) {
+  .container {
+    animation-fill-mode: forwards;
+    animation: fadeIn 1.5s;
+    min-height: 100vh;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .img {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 45vh;
+    width: 100%;
+    opacity: 10%;
+    filter: grayness(40%);
+  }
+
+  .introTitle {
+    position: relative;
+    display: flex;
+    background-color: $BackgroundBlack;
+    height: 17vh;
+    h1 {
+      margin: 120px 0 80px 300px;
+      font-size: 30px;
+      font-weight: 300;
+      color: $White;
+    }
+  }
+
+  .intoContainer {
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: $White;
+    background-color: $BackgroundBlack;
+  }
+
+  .introItem {
+    padding: 120px 150px;
+  }
+}
+
+/* Styles for tablet */
+@media (max-width: 1030px) {
+  .intoContainer {
+    background-color: $BackgroundBlack;
+    color: $White;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .img {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 30vh;
+    width: 100%;
+    opacity: 10%;
+    filter: grayness(40%);
+  }
+  .intro {
+    width: 100%;
+  }
+  .introTitle {
+    background-color: $BackgroundBlack;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    padding: 0px;
+
+    h1 {
+      margin: 0px;
+      font-size: 26px;
+      font-weight: 300;
+      color: $White;
+    }
+  }
+  .introItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 50px;
+    background: $BackgroundBlack;
+    h2 {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 400;
+      border-bottom: 2px solid white;
+    }
+    p {
+      padding-top: 30px;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  .shouldKnowContainer {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    background: $BackgroundBeige;
+  }
+
+  .shouldKnow {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    padding: 50px;
+    h2 {
+      text-align: center;
+      margin: 0;
+      font-size: 22px;
+      font-weight: 400;
+      color: $LogoGreen;
+      border-bottom: 2px solid $LogoGreen;
+    }
+  }
+
+  .shouldKnowItem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      text-align: center;
+      padding: 0px;
+      padding-top: 30px;
+      font-size: 20px;
+      font-weight: 400;
+      color: $LogoGreen;
+    }
+    ul {
+      list-style-type: square;
+      padding: 0;
+      padding-top: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0;
+      color: $Brown;
+    }
+  }
+
+  .contactUs {
+    position: relative;
+    background-color: $BackgroundBeige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 300;
+      color: $BackgroundBlack;
+    }
+  }
+}
+
+/* Styles for phones */
+@media (max-width: 390px) {
+  .intoContainer {
+    background-color: $BackgroundBlack;
+    color: $White;
+    height: 100%;
+    width: 100%;
+  }
+  .intro {
+    width: 100%;
+  }
+  .introTitle {
+    background-color: $BackgroundBlack;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    padding: 0px;
+
+    h1 {
+      margin: 0px;
+      font-size: 26px;
+      font-weight: 300;
+      color: $White;
+    }
+  }
+  .introItem {
+    height: auto;
+    padding: 0 50px;
+    padding-bottom: 100px;
+    background: $BackgroundBlack;
+    h2 {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 400;
+      border-bottom: 2px solid white;
+    }
+    p {
+      padding-top: 30px;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  .shouldKnowContainer {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    background: $BackgroundBeige;
+  }
+
+  .shouldKnow {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+    padding: 50px;
+    h2 {
+      text-align: center;
+      margin: 0;
+      font-size: 22px;
+      font-weight: 400;
+      color: $LogoGreen;
+      border-bottom: 2px solid $LogoGreen;
+    }
+  }
+
+  .shouldKnowItem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      text-align: center;
+      padding: 0px;
+      padding-top: 10px;
+      font-size: 20px;
+      font-weight: 400;
+      color: $LogoGreen;
+    }
+    ul {
+      list-style-type: square;
+      padding: 0;
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0;
+      color: $Brown;
+    }
+  }
+
+  .contactUs {
+    position: relative;
+    background-color: $BackgroundBeige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 300;
+      color: $BackgroundBlack;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .introTitle {
+    h1 {
+      font-size: 22px;
+    }
+  }
+  .contactUs {
+    h1 {
+      font-size: 22px;
+    }
+  }
+}

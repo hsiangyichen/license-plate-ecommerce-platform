@@ -88,11 +88,12 @@
 
   textarea {
     width: 100%;
+    min-width: 100%;
+    max-width: 530px;
     padding: 12px 20px;
     max-height: 550px;
     font-size: 16px;
     font-family: Inter;
-    width: 100%;
     height: 300px;
     border: 0;
     border-radius: 0;
@@ -180,188 +181,296 @@
   text-align: center;
 }
 
-// @media (max-width: 390px) {
-//   .container {
-//     position: relative;
-//     width: 100%;
-//     min-height: 100vh;
-//     background: $BackgroundBeige;
-//   }
-//   .item {
-//     z-index: 1;
-//     width: 100%;
-//     position: absolute;
-//     top: 0vh;
-//     display: flex;
-//     align-items: center;
-//     h1 {
-//       margin: 120px 300px;
-//       font-size: 30px;
-//       font-weight: 300;
-//       color: $BackgroundBlack;
-//     }
-//   }
+@media (max-width: 1440px) {
+  .container {
+    position: relative;
+    width: 100%;
+    // height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: $BackgroundBeige;
+  }
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 100px 150px;
+    gap: 100px;
+    overflow: hidden;
+  }
+  .infoItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 40px;
+    color: $BackgroundBlack;
+    h2 {
+      padding-left: 30px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
 
-//   .img {
-//     object-fit: cover;
-//     object-position: center;
-//     position: absolute;
-//     top: 0vh;
-//     height: 60vh;
-//     width: 100%;
-//     opacity: 10%;
-//   }
+@media (max-width: 1030px) {
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    gap: 0px;
+    overflow: hidden;
+  }
+  .formLeft {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
 
-//   .form {
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     // justify-content: center;
-//     padding: 0;
-//     gap: 0px;
-//     overflow: hidden;
-//   }
+  .infoItem {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 0px;
+    color: $BackgroundBlack;
+    h2 {
+      padding-left: 20px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
 
-//   .formLeft {
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     padding: 40px;
-//   }
+  .formRight {
+    width: 100%;
+  }
 
-//   .infoItem {
-//     display: flex;
-//     flex-direction: row;
-//     // align-items: center;
-//     padding: 10px;
-//     margin: 0px;
-//     color: $BackgroundBlack;
-//     h2 {
-//       padding-left: 20px;
-//       font-size: 16px;
-//       font-weight: 400;
-//     }
-//   }
+  .buttonContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
 
-//   .formRight {
-//     width: 100%;
-//   }
+  .inputItem {
+    textarea {
+      min-width: 100%;
+    }
+  }
+}
 
-//   .inputItem {
-//     padding: 10px;
-//     input {
-//       width: 100%;
-//       padding: 12px 20px;
-//       font-size: 16px;
-//       font-family: Inter;
-//       background-color: rgba(27, 29, 30, 0.4);
-//       box-sizing: border-box;
-//       border: 0;
-//       -webkit-transition: 0.5s;
-//       transition: 0.5s;
-//       outline: none;
-//     }
+@media (max-width: 760px) {
+  .container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: $BackgroundBeige;
+  }
+  .item {
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    top: 0vh;
+    display: flex;
+    align-items: center;
+    h1 {
+      margin: 120px 300px;
+      font-size: 30px;
+      font-weight: 300;
+      color: $BackgroundBlack;
+    }
+  }
 
-//     input::placeholder {
-//       color: $White;
-//       opacity: 80%;
-//     }
+  .img {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0vh;
+    height: 60vh;
+    width: 100%;
+    opacity: 10%;
+  }
 
-//     input:focus {
-//       background-color: rgba(27, 29, 30, 0.24);
-//     }
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    padding: 0;
+    gap: 0px;
+    overflow: hidden;
+  }
 
-//     textarea {
-//       width: 100%;
-//       padding: 12px 20px;
-//       max-height: 550px;
-//       font-size: 16px;
-//       font-family: Inter;
-//       width: 100%;
-//       height: 300px;
-//       border: 0;
-//       border-radius: 0;
-//       outline: none;
-//       background-color: rgba(27, 29, 30, 0.4);
-//     }
+  .formLeft {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+  }
 
-//     textarea:focus {
-//       background-color: rgba(27, 29, 30, 0.24);
-//     }
+  .infoItem {
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    padding: 10px;
+    margin: 0px;
+    color: $BackgroundBlack;
+    h2 {
+      padding-left: 20px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
 
-//     textarea::placeholder {
-//       color: $White;
-//       opacity: 80%;
-//     }
-//   }
+  .formRight {
+    width: 100%;
+  }
 
-//   .buttonContainer {
-//     display: flex;
-//     position: relative;
-//     justify-content: center;
-//     margin: 6px 10px;
-//   }
+  .inputItem {
+    padding: 10px;
+    input {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-family: Inter;
+      background-color: rgba(27, 29, 30, 0.4);
+      box-sizing: border-box;
+      border: 0;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      outline: none;
+    }
 
-//   .button {
-//     cursor: pointer;
-//     width: 150px;
-//     height: 40px;
-//     font-size: 18px;
-//     font-weight: 100;
-//     border: 0;
-//     border-radius: 0;
-//     background-color: rgba(27, 29, 30, 0.8);
-//     color: $White;
-//     -webkit-transition: 0.2s;
-//     transition: 0.2s;
-//     &:hover {
-//       background-color: rgba(27, 29, 30, 0.4);
-//     }
-//   }
+    input::placeholder {
+      color: $White;
+      opacity: 80%;
+    }
 
-//   .error {
-//     color: $BackgroundBlack;
-//     font-family: Inter;
-//     font-size: 14px;
-//     margin-top: 4px;
-//   }
+    input:focus {
+      background-color: rgba(27, 29, 30, 0.24);
+    }
 
-//   .popup {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     color: $BackgroundBlack;
-//     background-color: rgba(0, 0, 0, 0.5);
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     h2 {
-//       font-size: 28px;
-//     }
-//     p {
-//       font-size: 16px;
-//     }
-//     button {
-//       width: 500px;
-//       padding: 15px;
-//       font-size: 16px;
-//       border: 0;
-//       cursor: pointer;
-//       background-color: $BackgroundBeige;
-//       color: $BackgroundBlack;
-//       &:hover {
-//         background-color: #b2b2b2;
-//       }
-//     }
-//   }
+    textarea {
+      width: 100%;
+      padding: 12px 20px;
+      max-height: 550px;
+      font-size: 16px;
+      font-family: Inter;
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 0;
+      outline: none;
+      background-color: rgba(27, 29, 30, 0.4);
+    }
 
-//   .popupInner {
-//     width: 500px;
-//     background-color: white;
-//     padding: 25px;
-//     text-align: center;
-//   }
-// }
+    textarea:focus {
+      background-color: rgba(27, 29, 30, 0.24);
+    }
+
+    textarea::placeholder {
+      color: $White;
+      opacity: 80%;
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 6px 10px;
+  }
+
+  .button {
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 100;
+    border: 0;
+    border-radius: 0;
+    background-color: rgba(27, 29, 30, 0.8);
+    color: $White;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    &:hover {
+      background-color: rgba(27, 29, 30, 0.4);
+    }
+  }
+
+  .error {
+    color: $BackgroundBlack;
+    font-family: Inter;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: $BackgroundBlack;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 16px;
+    }
+    button {
+      width: 500px;
+      padding: 15px;
+      font-size: 16px;
+      border: 0;
+      cursor: pointer;
+      background-color: $BackgroundBeige;
+      color: $BackgroundBlack;
+      &:hover {
+        background-color: #b2b2b2;
+      }
+    }
+  }
+
+  .popupInner {
+    width: 500px;
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 390px) {
+  .infoItem {
+    width: 330px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin: 0px;
+    color: $BackgroundBlack;
+    h2 {
+      padding-left: 20px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .icon {
+    display: none;
+  }
+  .infoItem {
+    h2 {
+      padding: 0;
+    }
+  }
+}

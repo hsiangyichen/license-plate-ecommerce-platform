@@ -77,19 +77,39 @@ const ContactForm: React.FC = () => {
         <div className={styles.form}>
           <div className={styles.formLeft}>
             <div className={styles.infoItem}>
-              <Person width="30px" height="30px" fill="rgba(27,29,30,0.4)" />
+              <Person
+                className={styles.icon}
+                width="30px"
+                height="30px"
+                fill="rgba(27,29,30,0.4)"
+              />
               <h2>李生</h2>
             </div>
             <div className={styles.infoItem}>
-              <Email width="28px" height="28px" fill="rgba(27,29,30,0.4)" />
+              <Email
+                className={styles.icon}
+                width="28px"
+                height="28px"
+                fill="rgba(27,29,30,0.4)"
+              />
               <h2>218luckynumber@gmail.com</h2>
             </div>
             <div className={styles.infoItem}>
-              <Phone width="28px" height="28px" fill="rgba(27,29,30,0.4)" />
+              <Phone
+                className={styles.icon}
+                width="28px"
+                height="28px"
+                fill="rgba(27,29,30,0.4)"
+              />
               <h2>9226 5737</h2>
             </div>
             <div className={styles.infoItem}>
-              <Instagram width="30px" height="30px" fill="rgba(27,29,30,0.4)" />
+              <Instagram
+                className={styles.icon}
+                width="30px"
+                height="30px"
+                fill="rgba(27,29,30,0.4)"
+              />
               <h2>218luckynumber</h2>
             </div>
           </div>
