@@ -28,7 +28,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
           onKeyDown={onEnterKeyPress}
         />
         <a className={styles.searchIcon} onClick={onSearch}>
-          <Search width="25px" height="25px" />
+          <Search className={styles.icon} width="25px" height="25px" />
         </a>
       </div>
     </div>

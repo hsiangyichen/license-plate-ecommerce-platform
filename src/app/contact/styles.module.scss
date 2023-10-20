@@ -2,23 +2,37 @@
 
 .container {
   background-color: $BackgroundBlack;
+  color: $White;
+  height: 100%;
+  width: 100%;
+  // overflow: hidden;
+  // background-color: $BackgroundBlack;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  animation-fill-mode: forwards;
-  animation: fadeIn 1.5s;
-  min-height: 100vh;
-  overflow: hidden;
+  // display: flex;
+  // flex-direction: column;
+  // animation-fill-mode: forwards;
+  // animation: fadeIn 1.5s;
+  // min-height: 100vh;
+  // overflow: hidden;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.aboutUsFilter {
+  background: linear-gradient(
+    180deg,
+    rgba(16, 75, 71, 0.6) 0%,
+    rgba(33, 51, 50, 0.6) 19.27%,
+    rgba(27, 29, 30, 0.6) 52.08%
+  );
 }
+
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
 .contactUs {
   position: relative;
@@ -34,17 +48,28 @@
   }
 }
 
-.aboutUsFilter {
-  background: linear-gradient(
-    180deg,
-    rgba(16, 75, 71, 0.6) 0%,
-    rgba(33, 51, 50, 0.6) 19.27%,
-    rgba(27, 29, 30, 0.6) 52.08%
-  );
-  object-fit: cover;
-  object-position: center;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 35vh;
+@media (max-width: 1030px) {
+  .contactUs {
+    position: initial;
+    // position: relative;
+    background-color: $BackgroundBeige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 300;
+      color: $BackgroundBlack;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .contactUs {
+    h1 {
+      font-size: 22px;
+    }
+  }
 }

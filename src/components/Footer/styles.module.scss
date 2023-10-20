@@ -9,12 +9,38 @@
   // justify-items: center;
   align-items: center;
   // color: $White;
+  font-size: 16px;
   background-color: $White;
 }
 
-// .item {
-//   position: absolute;
-//   top: 10px;
+/* Styles for phones */
+@media screen and (max-width: 760px) {
+  .container {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    font-size: 14px;
+    background-color: $White;
+  }
+}
+
+// /* Styles for phones */
+// @media screen and (max-width: 390px) {
+//   .container {
+//     height: 120px;
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//     padding: 50px;
+//     font-size: 12px;
+//     background-color: $White;
+//   }
 // }
 
 /* Styles for phones */

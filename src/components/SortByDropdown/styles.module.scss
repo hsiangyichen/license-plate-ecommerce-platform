@@ -3,7 +3,6 @@
 .sortByContainer {
   display: flex;
   align-items: center;
-  margin-top: 5px;
 }
 
 .sortByContainer label {
@@ -16,7 +15,6 @@
   padding: 2px;
   border: none;
   width: 140px;
-  // height: 18px;
   outline: none;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -30,4 +28,32 @@
 
 .sortSelect option {
   background-color: #fff;
+}
+
+/* Styles for tablet */
+@media (max-width: 760px) {
+  .sortByContainer label {
+    margin-right: 5px;
+    font-size: 15px;
+  }
+
+  .sortSelect {
+    height: 30px;
+    margin: 0px;
+    padding: 3px;
+    border: none;
+    width: 60px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .label {
+    display: none;
+  }
+}
+
+/* Styles for tablet */
+@media (max-width: 670px) {
 }

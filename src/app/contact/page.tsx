@@ -11,8 +11,10 @@ const Contact = () => {
   return (
     <div className={styles.container}>
       <div className={styles.item}>
-        <div className={styles.aboutUsFilter}></div>
-        <Navbar />
+        <div className={styles.aboutUsFilter}>
+          <Navbar />
+        </div>
+
         <div className={styles.contactUs}>
           <h1>CONTACT US / 聯繫我們</h1>
         </div>

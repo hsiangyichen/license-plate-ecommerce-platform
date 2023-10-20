@@ -124,22 +124,26 @@ const Purchase = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.aboutUsFilter}></div>
-      <Navbar />
+      <div className={styles.aboutUsFilter}>
+        <Navbar />
+      </div>
+
       <div className={styles.item}>
         <div className={styles.shop}>
           <h1>SHOP / 購買車牌</h1>
         </div>
-        <div className={styles.searchBar}>
-          <SearchBar
-            searchTerm={searchTerm}
-            onSearchChange={handleSearchChange}
-            onEnterKeyPress={handleEnterKeyPress}
-            onSearch={handleSearchClick}
-          />
-        </div>
-        <div className={styles.paginationAndDropdown}>
-          <SortByDropdown onChange={handleSortChange} />
+        <div className={styles.searchBarAndDropdown}>
+          <div className={styles.searchBar}>
+            <SearchBar
+              searchTerm={searchTerm}
+              onSearchChange={handleSearchChange}
+              onEnterKeyPress={handleEnterKeyPress}
+              onSearch={handleSearchClick}
+            />
+          </div>
+          <div className={styles.paginationAndDropdown}>
+            <SortByDropdown onChange={handleSortChange} />
+          </div>
         </div>
       </div>
 

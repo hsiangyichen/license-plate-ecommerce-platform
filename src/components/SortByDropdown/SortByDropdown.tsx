@@ -14,16 +14,18 @@ const SortByDropdown: React.FC<SortByDropdownProps> = ({ onChange }) => {
 
   return (
     <div className={styles.sortByContainer}>
-      <label htmlFor={styles.sortSelect}>按照類型:</label>
+      <label className={styles.label} htmlFor={styles.sortSelect}>
+        按照類型：
+      </label>
       <select
         id="sortSelect"
         className={styles.sortSelect}
         onChange={handleSortChange}
       >
-        <option value="default">Select All</option>
-        <option value="priceLow">Price Low to High</option>
-        <option value="priceHigh">Price High to Low</option>
-        <option value="alphabeticalOrder">Alphabetical A-Z</option>
+        <option value="default">篩選</option>
+        <option value="priceLow">價格 ： 由低到高</option>
+        <option value="priceHigh">價格 ： 由高到低</option>
+        <option value="alphabeticalOrder">按照首字母</option>
       </select>
     </div>
   );
