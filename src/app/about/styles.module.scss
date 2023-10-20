@@ -243,6 +243,7 @@
   .introTitle {
     background-color: $BackgroundBlack;
     display: flex;
+    // position: initial;
     justify-content: center;
     align-items: center;
     height: 15vh;
@@ -356,6 +357,7 @@
   .introTitle {
     background-color: $BackgroundBlack;
     display: flex;
+    position: initial;
     justify-content: center;
     align-items: center;
     height: 15vh;
