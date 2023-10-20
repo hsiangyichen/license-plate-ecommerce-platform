@@ -4,6 +4,7 @@
   width: 100%;
   min-height: 100vh;
   background: $BackgroundBeige;
+  position: relative;
 }
 .item {
   width: 100%;
@@ -23,7 +24,7 @@
   object-fit: cover;
   object-position: center;
   position: absolute;
-  top: 50vh;
+  top: 0vh;
   height: 60vh;
   width: 100%;
   opacity: 10%;
@@ -66,7 +67,7 @@
     width: 100%;
     padding: 12px 20px;
     font-size: 16px;
-    font-family: Inter;
+
     background-color: rgba(27, 29, 30, 0.4);
     box-sizing: border-box;
     border: 0;
@@ -91,7 +92,7 @@
     padding: 12px 20px;
     max-height: 550px;
     font-size: 16px;
-    font-family: Inter;
+
     height: 300px;
     border: 0;
     border-radius: 0;
@@ -135,7 +136,7 @@
 
 .error {
   color: $BackgroundBlack;
-  font-family: Inter;
+
   font-size: 15px;
   margin-top: 4px;
 }
@@ -339,7 +340,7 @@
       width: 100%;
       padding: 12px 20px;
       font-size: 16px;
-      font-family: Inter;
+
       background-color: rgba(27, 29, 30, 0.4);
       box-sizing: border-box;
       border: 0;
@@ -362,7 +363,7 @@
       padding: 12px 20px;
       max-height: 550px;
       font-size: 16px;
-      font-family: Inter;
+
       width: 100%;
       height: 300px;
       border: 0;
@@ -407,7 +408,7 @@
 
   .error {
     color: $BackgroundBlack;
-    font-family: Inter;
+
     font-size: 15px;
     margin-top: 4px;
   }
