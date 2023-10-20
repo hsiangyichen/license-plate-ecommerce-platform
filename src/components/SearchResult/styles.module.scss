@@ -5,20 +5,32 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
-  // opacity: 0;
-  // animation: fadeIn 1.5s;
-  // animation-delay: 0.3s;
-  // animation-fill-mode: forwards;
+  opacity: 0;
+  animation: fadeIn 1s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  -webkit-animation: fadeIn 1s;
+  -webkit-animation-delay: 0.2s;
+  -webkit-animation-fill-mode: forwards;
 }
 
-// @keyframes fadeIn {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .loading {
   display: flex;
@@ -207,6 +219,9 @@
   }
   .resultItem {
     width: calc(50% - 2.5px);
+    &:hover {
+      background-color: rgba(27, 29, 30, 0.15);
+    }
   }
   .sidebar {
     width: 100%;

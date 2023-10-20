@@ -111,23 +111,31 @@ const Purchase = () => {
   const nextPage = () => {
     if (currentPage < Math.ceil(sortedResults.length / itemsPerPage)) {
       setCurrentPage(currentPage + 1);
+      scrollToContainer();
     }
   };
 
   const prevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
+      scrollToContainer();
     }
   };
 
   const currentItems = calculateCurrentPageItems();
 
+  const scrollToContainer = () => {
+    const containerElement = document.getElementById("container");
+    if (containerElement) {
+      containerElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className={styles.container}>
+    <div id="container" className={styles.container}>
       <div className={styles.aboutUsFilter}>
         <Navbar />
       </div>
-
       <div className={styles.item}>
         <div className={styles.shop}>
           <h1>SHOP / 購買車牌</h1>
@@ -146,7 +154,6 @@ const Purchase = () => {
           </div>
         </div>
       </div>
-
       <div className={styles.bottomContainer}>
         <div className={styles.sidebarAndResults}>
           <SearchResult results={currentItems} loading={loading} />

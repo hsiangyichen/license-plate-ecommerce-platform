@@ -6,12 +6,10 @@
   right: 110px;
   z-index: 999;
   padding: 5px;
-  // background-color: #007bff;
-  // color: #fff;
-  // border-radius: 30px;
   cursor: pointer;
   &:hover {
-    animation: arrowUp 1.5s infinite;
+    animation: arrowUp 1s infinite;
+    -webkit-animation: arrowUp 1s infinite; /* Add the -webkit prefix for animation */
   }
 }
 
@@ -24,7 +22,43 @@
     opacity: 1;
   }
   100% {
-    transform: translate(0px, -15px);
+    transform: translate(0px, -10px);
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes arrowUp {
+  0% {
+    -webkit-transform: translate(
+      0,
+      0
+    ); /* Add the -webkit prefix for transform */
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(
+      0px,
+      -10px
+    ); /* Add the -webkit prefix for transform */
+    opacity: 0;
+  }
+}
+
+/* Styles for tablet */
+@media (max-width: 760px) {
+  .scrollToTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    z-index: 999;
+    padding: 5px;
+    cursor: pointer;
+    &:hover {
+      animation: arrowUp 1s infinite;
+      -webkit-animation: arrowUp 1s infinite; /* Add the -webkit prefix for animation */
+    }
   }
 }

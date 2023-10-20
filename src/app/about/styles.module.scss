@@ -1,13 +1,25 @@
 @import "../styles/colors";
 
 .container {
-  animation-fill-mode: forwards;
-  animation: fadeIn 1.5s;
   min-height: 100vh;
   position: relative;
+  animation-fill-mode: forwards;
+  animation: fadeIn 1.5s;
+
+  -webkit-animation-fill-mode: forwards; /* Add the -webkit prefix for animation-fill-mode */
+  -webkit-animation: fadeIn 1.5s; /* Add the -webkit prefix for animation */
 }
 
 @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -168,21 +180,6 @@
 
 /* Styles for tablet */
 @media screen and (max-width: 1440px) {
-  .container {
-    animation-fill-mode: forwards;
-    animation: fadeIn 1.5s;
-    min-height: 100vh;
-  }
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
   .img {
     object-fit: cover;
     object-position: center;
@@ -267,7 +264,7 @@
     background: $BackgroundBlack;
     h2 {
       text-align: center;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 400;
       border-bottom: 2px solid white;
     }
@@ -296,7 +293,7 @@
     h2 {
       text-align: center;
       margin: 0;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 400;
       color: $LogoGreen;
       border-bottom: 2px solid $LogoGreen;
@@ -378,7 +375,7 @@
     background: $BackgroundBlack;
     h2 {
       text-align: center;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 400;
       border-bottom: 2px solid white;
     }
@@ -406,7 +403,7 @@
     h2 {
       text-align: center;
       margin: 0;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 400;
       color: $LogoGreen;
       border-bottom: 2px solid $LogoGreen;

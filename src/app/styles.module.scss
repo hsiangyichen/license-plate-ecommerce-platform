@@ -5,6 +5,9 @@
   flex-direction: column;
   animation-fill-mode: forwards;
   animation: fadeIn 1.5s;
+  -webkit-animation-fill-mode: forwards; /* Add the -webkit prefix for animation-fill-mode */
+  -webkit-animation: fadeIn 1.5s; /* Add the -webkit prefix for animation */
+
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -12,6 +15,15 @@
 }
 
 @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -74,6 +86,7 @@
   color: rgba(255, 255, 255, 0.9);
   padding: 70px 170px 0px 0px;
   animation: fadeDown 0.8s;
+  -webkit-animation: fadeDown 0.8s;
   opacity: 0;
   animation-fill-mode: forwards;
   h1 {
@@ -96,6 +109,11 @@
   animation-duration: 1s;
   animation-delay: 0.4s;
   animation-fill-mode: forwards;
+
+  -webkit-animation-name: fadeUp; /* Add the -webkit prefix for animation-name */
+  -webkit-animation-duration: 1s; /* Add the -webkit prefix for animation-duration */
+  -webkit-animation-delay: 0.4s; /* Add the -webkit prefix for animation-delay */
+  -webkit-animation-fill-mode: forwards;
   &:hover {
     background-color: rgba(255, 255, 255, 0.3);
   }
@@ -125,6 +143,21 @@
   }
 }
 
+@-webkit-keyframes fadeDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(
+      -30px
+    ); /* Add the -webkit prefix for transform */
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(
+      0px
+    ); /* Add the -webkit prefix for transform */
+  }
+}
+
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -133,6 +166,21 @@
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(
+      30px
+    ); /* Add the -webkit prefix for transform */
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(
+      0px
+    ); /* Add the -webkit prefix for transform */
   }
 }
 
@@ -452,23 +500,6 @@
   }
 }
 @media screen and (max-width: 760px) {
-  // .right {
-  //   width: 100%;
-  //   display: flex;
-  //   justify-content: flex-start;
-  //   position: absolute;
-  //   top: 22vh;
-  //   left: 50px;
-  //   color: rgba(255, 255, 255, 0.9);
-  //   padding: 0;
-  //   animation: fadeDown 0.8s;
-  //   opacity: 0;
-  //   animation-fill-mode: forwards;
-  //   h1 {
-  //     font-size: 60px;
-  //     font-weight: 700;
-  //   }
-  // }
   .right {
     width: 100%;
     display: flex;
@@ -504,8 +535,6 @@
   .container {
     display: flex;
     flex-direction: column;
-    animation-fill-mode: forwards;
-    animation: fadeIn 1.5s;
     width: 100%;
     overflow: hidden;
   }
