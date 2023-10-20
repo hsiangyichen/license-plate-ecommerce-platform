@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 
 const About = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.intoContainer}>
         <img className={styles.img} src={"images/aboutUs.jpg"} />
 

@@ -4,6 +4,7 @@
   animation-fill-mode: forwards;
   animation: fadeIn 1.5s;
   min-height: 100vh;
+  position: relative;
 }
 
 @keyframes fadeIn {
@@ -243,7 +244,7 @@
   .introTitle {
     background-color: $BackgroundBlack;
     display: flex;
-    position: initial;
+    // position: initial;
     justify-content: center;
     align-items: center;
     height: 15vh;
