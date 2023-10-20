@@ -167,7 +167,7 @@
     }
     p {
       padding-top: 0px;
-      font-size: 14px;
+      font-size: 15px;
       color: $Brown;
       font-weight: 400;
     }
@@ -211,7 +211,7 @@
     color: $LogoGreen;
     font-weight: 400;
     position: initial;
-    padding: 50px;
+    padding: 50px 0;
     h2 {
       text-align: center;
       margin: 0;
@@ -229,24 +229,25 @@
     display: flex;
 
     padding: 0 60px;
-    gap: 10px;
-
+    gap: 0px;
     h3 {
+      padding-top: 0px;
       padding-bottom: 0px;
       font-size: 20px;
       font-weight: 400;
       color: $LogoGreen;
     }
     p {
-      text-align: left;
+      text-align: center;
       padding-top: 0px;
-      font-size: 14px;
+      font-size: 15px;
       color: $Brown;
       font-weight: 400;
     }
   }
 
   .containerItem {
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
   }
@@ -256,7 +257,7 @@
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 330px) {
   .leftItem {
     display: none;
   }
