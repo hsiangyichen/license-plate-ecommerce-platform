@@ -599,9 +599,11 @@
     height: auto;
     padding: 70px 25px;
     position: relative;
+    width: 100%;
   }
 
   .aboutUsfilter {
+    z-index: 1;
     width: 100%;
     height: 60vh;
     background: linear-gradient(
@@ -616,6 +618,7 @@
   }
 
   .aboutusLeft {
+    width: 100%;
     h2 {
       font-size: 25px;
       margin-bottom: 28px;
@@ -628,6 +631,18 @@
 
   .aboutusRight {
     display: none;
+  }
+
+  .moreLink {
+    width: 100%;
+    // position: relative;
+    z-index: 2;
+    &:hover {
+      color: rgba(255, 255, 255, 0.603);
+      .arrowIcon {
+        animation: none;
+      }
+    }
   }
 
   .car1 {
