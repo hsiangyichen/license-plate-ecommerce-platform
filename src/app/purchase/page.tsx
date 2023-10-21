@@ -108,31 +108,36 @@ const Purchase = () => {
     return sortedResults.slice(startIndex, endIndex);
   };
 
+  const totalPages = Math.ceil(sortedResults.length / itemsPerPage);
+
   const nextPage = () => {
-    if (currentPage < Math.ceil(sortedResults.length / itemsPerPage)) {
+    if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
-      scrollToContainer();
+      executeScroll();
     }
   };
 
   const prevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
-      scrollToContainer();
+      executeScroll();
     }
   };
 
   const currentItems = calculateCurrentPageItems();
 
-  const scrollToContainer = () => {
-    const containerElement = document.getElementById("container");
-    if (containerElement) {
-      containerElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const scrollToContainer = () => {
+  //   const containerElement = document.getElementById("container");
+  //   if (containerElement) {
+  //     containerElement.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
+
+  const topRef = React.useRef<HTMLDivElement>(null);
+  const executeScroll = () => topRef.current?.scrollIntoView();
 
   return (
-    <div id="container" className={styles.container}>
+    <div ref={topRef} className={styles.container}>
       <div className={styles.aboutUsFilter}>
         <Navbar />
       </div>
@@ -165,6 +170,7 @@ const Purchase = () => {
         nextPage={nextPage}
         currentItems={currentItems}
         itemsPerPage={itemsPerPage}
+        totalPages={totalPages}
       />
       <ScrollToTopButton />
     </div>

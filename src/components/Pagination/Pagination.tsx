@@ -18,11 +18,8 @@ const Pagination: React.FC<PaginationProps> = ({
   nextPage,
   currentItems,
   itemsPerPage,
+  totalPages,
 }) => {
-  // const closePopup = () => {
-  //   console.log("yyy");
-  // };
-
   return (
     <div className={styles.paginationContainer}>
       <button
@@ -32,10 +29,11 @@ const Pagination: React.FC<PaginationProps> = ({
       >
         <ArrowLeftIcon />
       </button>
-      <span className={styles.pageNumber}>{currentPage}</span>
+      <span className={styles.pageNumber}>
+        {currentPage}/{totalPages}
+      </span>
       <button
         className={styles.paginationButton}
-        // onClick={closePopup}
         onClick={nextPage}
         disabled={currentItems.length < itemsPerPage}
       >

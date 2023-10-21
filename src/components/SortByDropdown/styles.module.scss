@@ -20,6 +20,10 @@
   border-radius: 6px;
   font-size: 15px;
   cursor: pointer;
+  &:active,
+  &:hover {
+    outline: none;
+  }
 }
 
 .sortSelect::-ms-expand {

@@ -245,7 +245,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 110px;
+    width: 120px;
     height: 35px;
     min-width: initial;
     background-color: $BackgroundBeige;
@@ -263,5 +263,20 @@
 }
 
 /* Styles for phones */
-@media (max-width: 390px) {
+@media (max-width: 280px) {
+  .resultItem {
+    width: calc(100%);
+  }
+  .plateNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 35px;
+    min-width: initial;
+    background-color: $BackgroundBeige;
+    border-radius: 8px;
+    border: 3px solid black;
+    overflow: hidden;
+  }
 }

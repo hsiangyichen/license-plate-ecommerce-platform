@@ -22,7 +22,6 @@ export default function Home() {
                 <button className={styles.button}>選擇專屬於你的車牌</button>
               </Link>
             </div>
-
             <div className={styles.right}>
               <h1>
                 218
