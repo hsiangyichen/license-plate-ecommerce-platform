@@ -456,13 +456,17 @@
 }
 
 @media (max-width: 390px) {
+  .item {
+    z-index: 0;
+  }
+
   .infoItem {
     width: 330px;
     display: flex;
     flex-direction: row;
     padding: 5px;
     margin: 0px;
-    color: $BackgroundBlack;
+    color: $White;
     h2 {
       padding-left: 20px;
       font-size: 15px;

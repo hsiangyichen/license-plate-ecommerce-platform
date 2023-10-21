@@ -5,9 +5,8 @@
   flex-direction: column;
   animation-fill-mode: forwards;
   animation: fadeIn 1.5s;
-  -webkit-animation-fill-mode: forwards; /* Add the -webkit prefix for animation-fill-mode */
-  -webkit-animation: fadeIn 1.5s; /* Add the -webkit prefix for animation */
-
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation: fadeIn 1.5s;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -511,6 +510,7 @@
     }
   }
   .aboutusContainer {
+    // height: auto;
     padding: 0 100px;
   }
   .aboutusLeft {
@@ -574,6 +574,7 @@
     width: 100%;
     z-index: 1;
     display: flex;
+    position: relative;
     flex-direction: column;
   }
 
@@ -591,7 +592,7 @@
     width: 100%;
     display: flex;
     position: absolute;
-    bottom: 80px;
+    bottom: 190px;
     margin: auto;
   }
 
@@ -600,22 +601,22 @@
     display: flex;
     justify-content: flex-start;
     position: absolute;
-    top: 22vh;
-    left: 50px;
+    top: 13vh;
+    left: 30px;
     color: rgba(255, 255, 255, 0.9);
     padding: 0;
     animation: fadeDown 0.8s;
     opacity: 0;
     animation-fill-mode: forwards;
     h1 {
-      font-size: 35px;
+      font-size: 38px;
       font-weight: 400;
     }
   }
 
   .button {
-    padding: 15px 20px;
-    font-size: 14px;
+    padding: 10px 20px;
+    font-size: 15px;
     font-weight: 100;
     background-color: rgba(27, 29, 30, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.6);
@@ -628,11 +629,10 @@
   }
 
   .downArrow {
-    position: initial;
+    position: absolute;
     text-align: center;
-    padding-bottom: 5px;
     width: 100%;
-    z-index: 1;
+    bottom: 10px;
     -webkit-animation: arrowDown 1.5s infinite;
     animation: arrowDown 1.5s infinite;
     animation-delay: 0.8s;
@@ -643,12 +643,14 @@
 
   // about us section
   .aboutusContainer {
-    padding: 0 25px;
+    height: auto;
+    padding: 70px 25px;
+    position: relative;
   }
 
   .aboutUsfilter {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     background: linear-gradient(
       180deg,
       #1b1d1e 0%,
@@ -657,7 +659,18 @@
       rgba(27, 29, 30, 0) 100%
     );
     position: absolute;
-    top: 80vh;
+    top: 0;
+  }
+
+  .aboutusLeft {
+    h2 {
+      font-size: 26px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid $White;
+    }
+    h1 {
+      display: none;
+    }
   }
 
   .aboutusRight {

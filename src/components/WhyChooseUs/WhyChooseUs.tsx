@@ -4,7 +4,6 @@ import styles from "./styles.module.scss";
 import LicensePlateIcon from "@assets/icons/license-plate.svg";
 import ToolsIcon from "@assets/icons/tools.svg";
 import WalletIcon from "@assets/icons/wallet.svg";
-import Line from "@assets/icons/line.svg";
 
 const WhyChooseUs = () => {
   return (

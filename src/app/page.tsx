@@ -19,7 +19,7 @@ export default function Home() {
           <div className={styles.itemdown}>
             <div className={styles.left}>
               <Link href="/purchase">
-                <button className={styles.button}>選擇專屬於你的車牌</button>
+                <button className={styles.button}>查看所有車牌</button>
               </Link>
             </div>
             <div className={styles.right}>
@@ -43,11 +43,11 @@ export default function Home() {
             <h2>ABOUT US / 關於我們</h2>
             <h1>Our Service</h1>
             <p>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;218
-              幸運車牌&quot;
+              &quot;218 幸運車牌&quot;
               是一家專業的車牌買賣公司，無論您是想一個獨特的車牌號碼，還是需要出售或轉讓您現有的車牌，我們的團隊將全程協助您完成交易手續。
               <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我們以透明、誠信和專業聞名，並致力於超越客戶的期望，為客戶提供「
+              <br />
+              我們以透明、誠信和專業聞名，並致力於超越客戶的期望，為客戶提供「
               優質的服務和滿意的交易 」結果是我們的使命。
             </p>
           </div>
@@ -59,7 +59,6 @@ export default function Home() {
             >
               See More
             </span>
-
             <ArrowRightIcon className={styles.arrowIcon} />
           </Link>
         </div>
