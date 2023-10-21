@@ -25,7 +25,7 @@ const Purchase = () => {
 
   // Add pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemsPerPage: number = 87;
+  const itemsPerPage: number = 88;
 
   const [loading, setLoading] = useState<boolean>(true);
 

@@ -93,21 +93,24 @@
 }
 
 .shouldKnowContainer {
-  position: relative;
-  padding: 120px 150px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: $BackgroundBeige;
+  padding: 120px 450px;
 }
 
 .shouldKnow {
-  width: 1342px;
+  width: 100%;
+  max-width: 1342px;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   overflow: hidden;
+
+  padding-top: 0;
   h2 {
     font-size: 24px;
     font-weight: 400;
@@ -130,6 +133,7 @@
 
 .shouldKnowItem {
   width: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -217,7 +221,20 @@
   }
 
   .shouldKnowContainer {
-    padding-top: 0;
+    width: auto;
+    padding: 150px;
+  }
+  .shouldKnow {
+    padding: 0;
+  }
+  .shouldKnowItem {
+    h3 {
+      text-align: center;
+      padding: 0px;
+      padding-top: 30px;
+      font-weight: 400;
+      color: $LogoGreen;
+    }
   }
 }
 
@@ -293,7 +310,8 @@
     justify-content: center;
     align-items: center;
     gap: 0px;
-    padding: 0 50px;
+    padding: 50px;
+    padding-bottom: 0;
     h2 {
       text-align: center;
       margin: 0;

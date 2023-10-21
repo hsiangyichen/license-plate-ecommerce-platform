@@ -8,7 +8,8 @@
   position: relative;
   display: flex;
   overflow: hidden;
-  padding: 120px 0;
+  padding: 120px 450px;
+  padding-bottom: 0;
 }
 
 .feature {
@@ -17,7 +18,7 @@
   flex-direction: column;
   justify-content: center;
   // align-items: center;
-  margin: 0px 450px;
+  // margin: 0px 450px;
   color: $LogoGreen;
   font-weight: 400;
   position: initial;
@@ -66,6 +67,7 @@
     background-color: $BackgroundBeige;
     overflow: hidden;
     padding: 150px;
+    padding-bottom: 0;
   }
 
   .feature {
@@ -128,7 +130,8 @@
     height: 100%;
     background-color: $BackgroundBeige;
     overflow: hidden;
-    padding: 0;
+    padding: 50px;
+    padding-bottom: 0;
   }
 
   .feature {
@@ -141,7 +144,7 @@
     color: $LogoGreen;
     font-weight: 400;
     position: initial;
-    padding: 50px;
+    padding: 0px;
     h2 {
       text-align: center;
       margin: 0;
@@ -204,6 +207,8 @@
     height: 100%;
     background-color: $BackgroundBeige;
     overflow: hidden;
+    padding: 50px;
+    padding-bottom: 0;
   }
 
   .feature {
@@ -215,7 +220,6 @@
     color: $LogoGreen;
     font-weight: 400;
     position: initial;
-    padding: 50px 0;
     h2 {
       text-align: center;
       margin: 0;
@@ -231,8 +235,9 @@
     flex-direction: column;
     text-align: center;
     display: flex;
-    padding: 0 70px;
-    gap: 0px;
+    padding: 0;
+    padding-top: 30px;
+    gap: 10px;
     h3 {
       padding-top: 0px;
       padding-bottom: 0px;
@@ -250,7 +255,7 @@
   }
 
   .containerItem {
-    padding-top: 10px;
+    padding-top: 0px;
     display: flex;
     flex-direction: column;
   }
@@ -261,6 +266,17 @@
 }
 
 @media (max-width: 330px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    background-color: $BackgroundBeige;
+    overflow: hidden;
+    padding: 50px;
+    padding-bottom: 0;
+  }
+  .section {
+    padding: 0px;
+  }
   .leftItem {
     display: none;
   }
