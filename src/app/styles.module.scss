@@ -403,7 +403,7 @@
     width: 100%;
     display: flex;
     position: absolute;
-    bottom: 80px;
+    bottom: 150px;
     margin: auto;
   }
 
@@ -441,7 +441,8 @@
   }
 
   .aboutusContainer {
-    padding: 0 150px;
+    padding: 120px 150px;
+    height: auto;
   }
 
   .aboutusLeft {
@@ -464,7 +465,7 @@
       padding-bottom: 20px;
     }
     p {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 300;
     }
   }
@@ -473,11 +474,10 @@
     font-size: 18px;
     font-weight: 300;
     position: initial;
-    // position: absolute;
-    // bottom: 0px;
-    // right: 25px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 16px;
     &:hover {
       color: rgba(255, 255, 255, 0.603);
       .arrowIcon {
@@ -491,47 +491,192 @@
   }
 }
 @media screen and (max-width: 760px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .homeImg {
+    object-fit: cover;
+    object-position: center;
+    height: 58vh;
+    position: absolute;
+    top: 15vh;
+  }
+
+  .homeFilter {
+    background: linear-gradient(
+      180deg,
+      #104b47 0%,
+      rgba(33, 51, 50, 0.5) 29.17%,
+      rgba(0, 0, 0, 0.4) 62.05%,
+      #1b1d1e 93.75%
+    );
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 75vh;
+    z-index: 0;
+  }
+
+  .item {
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+
+  .itemdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+  }
+
+  .left {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 190px;
+    margin: auto;
+  }
+
   .right {
     width: 100%;
     display: flex;
-    // position: initial;
+    justify-content: flex-start;
     position: absolute;
-    top: 50px;
-    left: 0px;
-    justify-content: center;
+    top: 13vh;
+    left: 30px;
     color: rgba(255, 255, 255, 0.9);
     padding: 0;
     animation: fadeDown 0.8s;
     opacity: 0;
     animation-fill-mode: forwards;
     h1 {
-      font-size: 60px;
-      font-weight: 700;
+      font-size: 38px;
+      font-weight: 400;
     }
   }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 100;
+    background-color: rgba(27, 29, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    animation-name: fadeUp;
+    animation-duration: 1s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+  }
+
+  .downArrow {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+    -webkit-animation: arrowDown 1.5s infinite;
+    animation: arrowDown 1.5s infinite;
+    animation-delay: 0.8s;
+    opacity: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  // about us section
   .aboutusContainer {
-    // height: auto;
-    padding: 0 100px;
+    height: auto;
+    padding: 70px 25px;
+    position: relative;
   }
+
+  .aboutUsfilter {
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(
+      180deg,
+      #1b1d1e 0%,
+      rgba(27, 29, 30, 0) 35.42%,
+      rgba(27, 29, 30, 0) 75.52%,
+      rgba(27, 29, 30, 0) 100%
+    );
+    position: absolute;
+    top: 0;
+  }
+
   .aboutusLeft {
-    display: flex;
-    flex-direction: column;
+    h2 {
+      font-size: 25px;
+      margin-bottom: 28px;
+      border-bottom: 2px solid $White;
+    }
+    h1 {
+      display: none;
+    }
   }
-  .navigate {
-    padding: 100px 70px;
+
+  .aboutusRight {
+    display: none;
   }
-  .moreLink {
-    font-size: 18px;
-    font-weight: 300;
+
+  .car1 {
+    object-fit: cover;
+    object-position: center;
     position: initial;
-    display: flex;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    &:hover {
-      .arrowIcon {
-        animation: none;
-      }
+    width: 33.4%;
+    height: 70%;
+  }
+
+  .car2 {
+    object-fit: cover;
+    object-position: center;
+    position: initial;
+    width: 33.4%;
+    height: 70%;
+  }
+
+  .car3 {
+    object-fit: cover;
+    object-position: center;
+    position: initial;
+    width: 33.4%;
+    height: 70%;
+  }
+
+  .navigate {
+    text-align: center;
+    background-color: $BackgroundBlack;
+    color: $White;
+    padding: 100px 30px;
+    font-size: 15px;
+    font-weight: 200;
+  }
+}
+
+/* Styles for phones */
+@media screen and (max-width: 520px) {
+  .aboutusLeft {
+    h2 {
+      font-size: 26px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid $White;
+    }
+    h1 {
+      display: none;
+    }
+    p {
+      font-size: 15px;
     }
   }
 }
@@ -675,13 +820,6 @@
 
   .aboutusRight {
     display: none;
-    // width: 100%;
-    // display: flex;
-
-    // flex-direction: row;
-    // position: relative;
-    // height: 30vh;
-    // overflow: hidden;
   }
 
   .car1 {
