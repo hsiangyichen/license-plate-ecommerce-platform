@@ -10,6 +10,7 @@ interface PaginationProps {
   nextPage: () => void;
   currentItems: any[];
   itemsPerPage: number;
+  totalPages: number;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
