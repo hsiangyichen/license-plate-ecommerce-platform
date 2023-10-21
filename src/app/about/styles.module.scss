@@ -29,13 +29,14 @@
 }
 
 .img {
-  object-fit: cover;
-  object-position: center;
-  position: absolute;
-  top: 35vh;
-  width: 100%;
-  opacity: 10%;
-  filter: grayness(40%);
+  display: none;
+  // object-fit: cover;
+  // object-position: center;
+  // position: absolute;
+  // top: 35vh;
+  // width: 100%;
+  // opacity: 10%;
+  // filter: grayness(40%);
 }
 
 .introTitle {

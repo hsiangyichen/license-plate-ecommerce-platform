@@ -265,6 +265,26 @@
   }
 }
 
+@media (max-width: 390px) {
+  .section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    padding: 0;
+    padding-top: 10px;
+    gap: 10px;
+    h3 {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      font-size: 20px;
+      font-weight: 400;
+      color: $LogoGreen;
+    }
+  }
+}
+
 @media (max-width: 330px) {
   .container {
     width: 100%;
