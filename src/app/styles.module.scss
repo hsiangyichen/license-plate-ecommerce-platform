@@ -694,6 +694,13 @@
       font-size: 15px;
     }
   }
+  .left {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 170px;
+    margin: auto;
+  }
 }
 
 /* Styles for phones */
@@ -752,7 +759,7 @@
     width: 100%;
     display: flex;
     position: absolute;
-    bottom: 190px;
+    bottom: 170px;
     margin: auto;
   }
 
