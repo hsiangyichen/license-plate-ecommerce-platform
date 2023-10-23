@@ -27,9 +27,6 @@ const About = () => {
               <br />
               <br />
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我們的使命是為客戶提供優質的服務和滿意的交易結果，以透明、誠信和專業聞名，並致力於超越客戶的期望。
-              <br />
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;請瀏覽我們的網頁，了解更多關於我們公司以及我們的服務。如果您有任何問題或需要進一步的協助，請隨時與我們的團隊聯繫。感謝您選擇我們的車牌買賣公司，期待為您提供卓越的車牌交易體驗！
             </p>
           </div>
         </div>
